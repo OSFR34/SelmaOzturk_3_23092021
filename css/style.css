@@ -1,0 +1,30 @@
+/* GENERAL */
+.flexCentre {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+ }
+ .flexAround {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .flexBetween {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+.couleurPrimaire {
+    color: #9356DC
+}
+.couleurSecondaire {
+    color: #FF79DA;
+}
+.couleurTertiaire {
+    color: #99E2D0;
+}
+/* HEADER MOBILE FIRST  */
+.margesLogo {
+
+}
+    
