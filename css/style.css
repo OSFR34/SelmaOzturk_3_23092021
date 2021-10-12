@@ -1,30 +1,92 @@
-/* GENERAL */
-.flexCentre {
-    display: flex; 
-    justify-content: center;
+* {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+}
+header h1 {
+    display: flex;
     align-items: center;
- }
- .flexAround {
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
- }
- .flexBetween {
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
- }
-.couleurPrimaire {
-    color: #9356DC
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top:18px ;
+    font-family: shrikhand;
 }
-.couleurSecondaire {
-    color: #FF79DA;
+main {
+    padding: 8px;
+    font-family: roboto;    
 }
-.couleurTertiaire {
-    color: #99E2D0;
+h1 {
+    font-weight: bold;
 }
-/* HEADER MOBILE FIRST  */
-.margesLogo {
+p {
+    margin: 5%;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    list-style-position: outside;
+    padding:0;
+}
 
+.slogan {
+    padding-left: 12%;
+    padding-right: 12%;
+    text-align: center;
+}
+button {
+    width: 95%;
+    padding: 1.2rem;
+    margin: 6% 2% 6% 3%;
+    border-radius: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    background: linear-gradient(#ff79d9d0, #9256dce1); ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
+    color: white
+
+}
+ul button {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 6%;
+    border-radius: 18px;
+    font-weight: bold;
+    border: 0;
+    background:#9256dc15 ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
+    color:black
+}
+footer {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: rgba(255, 255, 255, 0.774); 
+footer h1 {
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top:18px ;
+    font-family: shrikhand;
+    font-style: italic;     
+}
+@media screen and (min-width: 600px) {
+    /* Ici, le css s'appliquera aux écrans de 600px minimum*/
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main section {
+        flex:1;
+        min-width: 45%;
+
+    }
+    
 }
     
