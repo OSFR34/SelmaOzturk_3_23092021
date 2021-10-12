@@ -4,6 +4,8 @@
 body {
     margin:0;
 }
+header {}
+
 header h1 {
     display: flex;
     align-items: center;
@@ -48,7 +50,7 @@ button {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
     color: white
-
+    
 }
 ul button {
     width: 90%;
@@ -67,10 +69,10 @@ ul button {
 footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.747);
-    color: rgba(255, 255, 255, 0.774); 
-.logoFooter {
-    font-style: oblique;
-    font-family: Shrikhand,"cursive";     
+    color: rgba(255, 255, 255, 0.774);
+    font-family: shrikhand; 
+footer h1 {
+    font-family: shrikhand;     
     padding-bottom: 10px;
     padding-top: 18px ;       
 }
