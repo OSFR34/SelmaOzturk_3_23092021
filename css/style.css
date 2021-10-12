@@ -13,6 +13,11 @@ header h1 {
     padding-top:18px ;
     font-family: shrikhand;
 }
+.slogan {
+    padding-left: 12%;
+    padding-right: 12%;
+    text-align: center;
+}
 main {
     padding: 8px;
     font-family: roboto;    
@@ -28,12 +33,6 @@ ul {
     list-style: none;
     list-style-position: outside;
     padding:0;
-}
-
-.slogan {
-    padding-left: 12%;
-    padding-right: 12%;
-    text-align: center;
 }
 button {
     width: 95%;
@@ -69,13 +68,13 @@ footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.747);
     color: rgba(255, 255, 255, 0.774); 
-footer h1 {
-    margin: auto;
+.logoFooter {
+    font-style: oblique;
+    font-family: Shrikhand,"cursive";     
     padding-bottom: 10px;
-    padding-top:18px ;
-    font-family: shrikhand;
-    font-style: italic;     
+    padding-top: 18px ;       
 }
+
 @media screen and (min-width: 600px) {
     /* Ici, le css s'appliquera aux écrans de 600px minimum*/
     main {
@@ -86,7 +85,6 @@ footer h1 {
         flex:1;
         min-width: 45%;
 
-    }
-    
+    }    
 }
     
