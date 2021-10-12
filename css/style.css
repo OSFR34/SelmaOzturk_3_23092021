@@ -1,11 +1,7 @@
-* {
-    box-sizing: border-box;
-}
+
 body {
     margin:0;
 }
-header {}
-
 header h1 {
     display: flex;
     align-items: center;
@@ -67,26 +63,19 @@ ul button {
     color:black
 }
 footer {
+    /* font-family: shrikhand; */
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.747);
     color: rgba(255, 255, 255, 0.774);
-    font-family: shrikhand; 
+}
 footer h1 {
-    font-family: shrikhand;     
-    padding-bottom: 10px;
-    padding-top: 18px ;       
+    font-family:shrikhand ;
+}
+h5 {
+    font-family: roboto;
+
 }
 
-@media screen and (min-width: 600px) {
-    /* Ici, le css s'appliquera aux écrans de 600px minimum*/
-    main {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    main section {
-        flex:1;
-        min-width: 45%;
+     
 
-    }    
-}
-    
+
