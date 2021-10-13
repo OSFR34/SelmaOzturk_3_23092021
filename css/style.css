@@ -20,17 +20,34 @@ main {
     padding: 8px;
     font-family: roboto;    
 }
-h1 {
+section h1 {
     font-weight: bold;
+    margin-left:1px;
+    font-size: 22px;
 }
-p {
+.btnExplorer {
+    /* margin: 2% 15% 0% 15%;   */
+    padding-top: 1rem;
+    padding-bottom:1rem;
+    width: 60%;
+    border-radius: 35px;
+    font-size: 0.96rem;
+    background: linear-gradient(#ff79d9d8, #9256dce1);
+    font-weight: normal;
+}
+.centrageBtnExplorer {
+    display: flex;
+    justify-content: center;
+}
+.slogan2 {
     margin: 5%;
     text-align: center;
+    font-size: 1.2rem;
 }
-ul {
+.ul {
     list-style: none;
     list-style-position: outside;
-    padding:0;
+    padding: 0;
 }
 button {
     width: 95%;
@@ -40,11 +57,11 @@ button {
     font-size: 1rem;
     font-weight: bold;
     border: 0;
-    background: linear-gradient(#ff79d9d0, #9256dce1); ;
+    
     display: flex;
     justify-content: center;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.137) 3px 3px 3px 0.5px;
     color: white
     
 }
@@ -63,13 +80,15 @@ ul button {
     color:black
 }
 footer {
-    /* font-family: shrikhand; */
+    font-family: roboto;
+
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.747);
     color: rgba(255, 255, 255, 0.774);
 }
 footer h1 {
-    font-family:shrikhand ;
+    font-family:shrikhand;
+    font-size: 20px;
 }
 h5 {
     font-family: roboto;
