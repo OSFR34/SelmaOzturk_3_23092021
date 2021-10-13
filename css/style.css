@@ -48,7 +48,9 @@ main .rechercheVille {
     font-size: 0.96rem;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
+    transition: filter eas 0.8s;
 }
+
 .centrageBtnExplorer {
     display: flex;
     justify-content: center;
@@ -60,28 +62,24 @@ main .rechercheVille {
     color:rgba(0, 0, 0, 0.562)
 }
 .margesTitresSecondaires {
-    padding-left: 8px;
+    padding-left: 15px;
 }
-ul {
-    list-style: none;
-    list-style-position: outside;
-    padding: 0;  
-}
+
 button {
     width: 95%;
     padding: 1.2rem;
     margin: 6% 2% 6% 3%;
     border-radius: 35px;
-    font-size: 1rem;
+    font-size: 0.98rem;
     font-weight: bold;
     border: 0;    
     display: flex;
     justify-content: center;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.137) 3px 3px 3px 0.5px;
-    color: white    
+    color: white;    
 }
-ul button {
+.placementIcones button {
     width: 90%;
     padding: 1.5rem;
     margin: 6%;
@@ -94,18 +92,52 @@ ul button {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
     color:black;
-
+    position: relative;
 }
+.placementIcones button i {
+    margin-right: 40px;
+    height: 15px;
+    width: 15px;
+}
+span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: #9356DC;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    transform: translate3d(-50%,-3px,0);
+}
+.alignementIcone1 {
+    padding-left: 25px;
+    padding-right: 10px;
+}
+.fas fa-mobile-alt fa-chart-line {
+    font-size: 60px;
+}
+
 footer {
     font-family: roboto;
 
     padding: 20px;
+    height: 200px;
     background-color: rgba(0, 0, 0, 0.747);
-    color: rgba(255, 255, 255, 0.774);
+    color: rgba(255, 255, 255, 0.986);
 }
-footer h1 {
+.logofooter {
     font-family:shrikhand;
     font-size: 20px;
+    letter-spacing: 1.4px;
+    padding-bottom: 18px;
+}
+footer div i {
+    margin-right: 15px;
+}
+.finitionsFooter {
+    line-height: 25px;
 }
 h5 {
     font-family: roboto;
