@@ -8,68 +8,98 @@
     /* border: 1px solid; */
 }
 body {
-    margin:0px;
+    margin: 0px;
     font-family: "roboto", sans-serif;
-}
-
-.slogan {
-    padding-left: 12%;
-    padding-right: 12%;
-    text-align: center;
 }
 main {
     padding: 0px;
     font-family: roboto;    
-} 
+}
+/* Fin general */
+
 header {
     font-family: 'Shrikhand', cursive;
-    font-size: 0.8rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.4px;
     text-align: center;
+    justify-content: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 /40%);
-    padding: 0.005%;
+    padding-top: 15px;
+    padding-bottom: 8px;
 }
-main .rechercheVille {
+.rechercheVille {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; pour le responsive*/
+    padding-left: 28%;
     background-color: rgba(211, 211, 211, 0.39);
-    text-align: center;    
-    gap: 1rem;    
-}
-.espacementsIconesBtn {
+    text-align: center;   
+    margin-top:0;
+    padding-top: 0; 
     gap: 1rem;
+    font-weight:bolder; 
+    color:rgba(0, 0, 0, 0.575)   
+}
+.colorBlack {
+    color:black;
+}
+.margesRechercher {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: ;
+}
+.arrierePlan {
+    background:rgba(236, 234, 234, 0.356) ;
+
+}
+.slogan {
+    padding-top: 9%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.sloganSecondaire {
+    padding-top: 4%;
+    padding-bottom: 1.2%;
+    text-align: center;
+    font-size: 1.15rem;
+    color:rgba(0, 0, 0, 0.562)
 }
 .btnExplorer {
     /* margin: 2% 15% 0% 15%;   */
-    padding-top: 1rem;
-    padding-bottom:1rem;
-    width: 60%;
-    border-radius: 35px;
-    font-size: 0.96rem;
+    padding-top: 1.03rem;
+    padding-bottom:1.03rem;
+    width: 61%;
+    height: auto;
+    border-radius: 40px;
+    font-size: 0.965rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: roboto;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
     transition: filter eas 0.8s;
+    margin-bottom: 60px;
 }
 
 .centrageBtnExplorer {
     display: flex;
     justify-content: center;
 }
-.slogan2 {
-    margin: 5%;
-    text-align: center;
-    font-size: 1.1rem;
-    color:rgba(0, 0, 0, 0.562)
-}
 .margesTitresSecondaires {
     padding-left: 15px;
+    padding-top: 22px;
+    padding-bottom: 15px;
 }
 
 button {
-    width: 95%;
-    padding: 1.2rem;
+    width: 93%;
+    padding: 1.5rem;
+    height: 74px;
     margin: 6% 2% 6% 3%;
-    border-radius: 35px;
+    border-radius: 37px;
     font-size: 0.98rem;
     font-weight: bold;
     border: 0;    
@@ -86,7 +116,7 @@ button {
     border-radius: 18px;
     font-weight: bold;
     border: 0;
-    background:#9256dc15 ;
+    background:rgba(236, 234, 234, 0.356) ;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -99,22 +129,26 @@ button {
     height: 15px;
     width: 15px;
 }
+.alignementIcone1 {
+    padding-left: 18px;
+    padding-right: 16px;
+}
 span {
     display: inline-block;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     background: #9356DC;
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 4px;
     border-radius: 50px;
     position: absolute;
     left: 0;
-    transform: translate3d(-50%,-3px,0);
+    transform: translate3d(-50%,2px,0);
 }
-.alignementIcone1 {
-    padding-left: 25px;
-    padding-right: 10px;
-}
+
 .fas fa-mobile-alt fa-chart-line {
     font-size: 60px;
 }
@@ -139,10 +173,7 @@ footer div i {
 .finitionsFooter {
     line-height: 25px;
 }
-h5 {
-    font-family: roboto;
 
-}
 
      
 
