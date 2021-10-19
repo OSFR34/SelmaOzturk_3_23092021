@@ -1,18 +1,22 @@
 {
-  "name": "ohmyfood",
+  "name": "selmaozturk_3_23092021",
   "version": "1.0.0",
-  "description": "Projet 3 OC",
+  "description": "Projet 3 OC oh my food",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OSFR34/SelmaOzturk_3_23092021"
+    "url": "git+https://github.com/OSFR34/SelmaOzturk_3_23092021.git"
   },
   "author": "Selma Ozturk",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/OSFR34/SelmaOzturk_3_23092021/issues"
+  },
+  "homepage": "https://github.com/OSFR34/SelmaOzturk_3_23092021#readme",
+  "dependencies": {
     "sass": "^1.43.2"
   }
 }
