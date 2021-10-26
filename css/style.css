@@ -15,8 +15,14 @@ main {
     padding: 0px;
     font-family: roboto;    
 }
+#blocPage {
+    max-width: 1500px;
+    min-width: 335px;
+    margin: 0 auto;
+
+}
 .backGris {
-    background:rgba(236, 234, 234, 0.356);
+    background:rgba(196, 193, 193, 0.212);
     margin: 0;
 }
 /* Fin general */
@@ -27,16 +33,21 @@ header {
     letter-spacing: 0.4px;
     text-align: center;
     justify-content: center;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.349);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.356);;
     padding-top: 15px;
     padding-bottom: 8px;
+    position: sticky;
+}
+header div {
+    position: sticky;
+    top: 0;
 }
 /*Recherche/ville*/
 .rechercheVille {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(211, 211, 211, 0.39);
+    background-color: rgba(170, 168, 168, 0.253);
     text-align: center;   
     margin-top:0;
     padding-top: 0; 
@@ -61,12 +72,12 @@ header {
     font-size: 1.5em;
     font-weight: bold;
 }
-.sloganSecondaire {
+.slogan2 {
     padding-top: 4%;
     padding-bottom: 1.2%;
     text-align: center;
     font-size: 1.15rem;
-    color:rgba(0, 0, 0, 0.562)
+    color:rgba(0, 0, 0, 0.562);
 }
 .btnExplorer {
     padding-top: 1.03rem;
@@ -82,12 +93,13 @@ header {
     font-weight: normal;
     transition: filter eas 0.8s;
     margin-bottom: 60px;
-    box-shadow:rgba(10, 10, 10, 10);
-    transition: transform 200ms;
+    box-shadow:0px 0px 10px 0px  rgba(236, 234, 234, 0.356)  
 }
 .btnExplorer:hover {
+    transition-duration: 200ms;
     transform: scale(1.02);
     filter:brightness(1.1);
+    box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     cursor:pointer;
 }
 .centrageBtnExplorer {
@@ -95,11 +107,14 @@ header {
     justify-content: center;
 }
 .margesTitresSecondaires {
-    padding-left: 15px;
-    padding-top: 22px;
-    padding-bottom: 15px;
+    padding: 22px 0 15px 15px;
 }
 /* Fonctionnement */
+#blocFonctionnement {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+}
 button {
     width: 93%;
     padding: 1.5rem;
@@ -107,40 +122,43 @@ button {
     margin: 6% 2% 6% 3%;
     border-radius: 37px;
     font-size: 0.98rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: roboto;
     border: 0;    
     display: flex;
     justify-content: center;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.137) 3px 3px 3px 0.5px;
+    /* box-shadow: rgba(0, 0, 0, 0.137) 3px 3px 3px 0.5px; */
     color: white;    
 }
-.placementIcones button {
+
+.placementBtn button {
+    border: 1px solid blue;
     width: 90%;
-    padding: 1.5rem;
-    margin: 6%;
+    padding: 1rem;
     border-radius: 18px;
-    font-weight: bold;
+    font-weight: regular;
     border: 0;
     background:rgba(236, 234, 234, 0.356);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px;
+    align-items: center;
+    /* box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px; */
+    box-shadow: 0 0 14px #BBB;
     color:black;
     position: relative;
 }
-.placementIcones button i {
-    margin-right: 40px;
-    height: 15px;
-    width: 15px;
+.placementBtn button i {
+    justify-content: flex-start;
+    padding-right: 0.5rem;
+    padding-left: 1.5rem;
+    margin-right: 1.1rem;
 }
-.alignementIcone1 {
-    padding-left: 18px;
-    padding-right: 16px;
-}
+
+
 span {
-    display: inline-block;
+    /* display: inline-block; */
     width: 24px;
     height: 24px;
     background: #9356DC;
@@ -158,50 +176,98 @@ span {
 .fas fa-mobile-alt fa-chart-line {
     font-size: 60px;
 }
-/* Restaurants */
-#blocRestaurants {
+/* Restos */
+#blocRestos {
     height: auto;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    padding: 30px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 30px 15px;
+    background:rgba(196, 193, 193, 0.212);
+    margin-top: 60px;
 }
-.restaurantCarte{
+.blocCartesRestos {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 23px;
+    height: auto;
+    padding-left: 0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+.new {
+    border: 1px solid red;
+    position: relative;
+}
+.new::before {
+    content:"Nouveau";
+    position: absolute;
+    height: 2rem;
+    width: 5rem;
+    background-color:#99E2D0;
+    /* color: darken(#99E2D0, 70%); */
+    color: black
+    text-align: center;
+    display: grid;
+    place-items: center;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 2px;
+
+    
+}
+
+.carteResto {
     position:relative;
-    width:100%;
+    width: 96%;
     border-radius:15px;
-    box-shadow: 0px 0px 2px 0px rgba(33,33,33,1);
-    height:300px; 
+    box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
+    height: 270px;
+    margin: 0 2% 0 2%;
+    background: white; 
 }
-.restaurantCarte div:first-child {
+.carteResto div:first-child {
     background-size: cover;
-    background-position:center;
+    background-position: center;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height:70%;
+    height: 72%;    
 }
-.imgRestaurant1 {
-    background-image: url("../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg");   
+.imgResto1 {
+    background-image: url("../img/resto1.jpg");   
 }
-.imgRestaurant2 {
-    background-image: url("../img/stil-u2Lp8tXIcjw-unsplash.jpg");   
+.imgResto2 {
+    background-image: url("../img/resto2.jpg");  
 }
-.imgRestaurant3 {
-    background-image: url("../img/toa-heftiba-DQKerTsQwi0-unsplash.jpg");   
+.imgResto3 {
+    background-image: url("../img/resto3.jpg");   
 }
-.imgRestaurant4 {
-    background-image: url("../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");   
+.imgResto4 {
+    background-image: url("../img/resto4.jpg");   
 }
-.restaurantCarte .blocCoeur {
+.nomResto {
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 15px 0 5px 15px;
+}
+.quartierResto {
+    font-size: 18px;
+    padding-left: 15px;
+}
+/* coeur et animation */
+.carteResto .blocCoeur {
     position: absolute;
     bottom: 30px;
     right: 15px;
 }
 .blocCoeur img {
-      width: 29px;
-      height: 29px;
-      position: absolute;
-      right: 15px;
-      bottom: 4px;
+    width: 29px;  
+    height: 29px;  
+    position: absolute;  
+    right: 15px;  
+    bottom: 0;  
 }
 .blocCoeur img:last-child {
     opacity: 0;
@@ -214,7 +280,6 @@ span {
 /* section footer */
 footer {
     font-family: roboto;
-
     padding: 20px;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.747);
@@ -232,6 +297,84 @@ footer div i {
 .finitionsFooter {
     line-height: 25px;
 }
+/* Responsive */
+@media screen and (min-width: 800px) and (max-width:899px) {
+    .placementBtn {
+        display: flex;
+        flex-direction: row;        
+    }
+    .placementBtn button {
+        margin: 0.9rem;
+        margin-bottom: 2.5rem;                
+    }
+    .placementBtn button i {
+        margin-right: 0;
+        padding: 0.7rem;
+    }    
+    .btnExplorer {
+        padding-top: 1.3rem;
+        padding-bottom:1.3rem;
+        width: 40%;
+        height: auto;
+        border-radius: 40px;
+        font-size: 1.1rem;  
+    }
+    #blocRestos {
+       margin-top: 0px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .btnExplorer {
+        padding-top: 1.3rem;
+        padding-bottom:1.3rem;
+        width: 40%;
+        height: auto;
+        border-radius: 40px;
+        font-size: 1.1rem;  
+    }
+    .placementBtn {
+        display: flex;
+        flex-direction: row;        
+    }
+    .placementBtn button {
+        margin-right: 2.7rem;
+        padding-right: 4rem;
+        margin-left: 0.8rem;    
+    }
+    .placementBtn button i {
+        margin-right: 0.1 rem;
+        padding: 0.5rem;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .btnExplorer {
+        padding-top: 1.3rem;
+        padding-bottom:1.3rem;
+        width: 40%;
+        height: auto;
+        border-radius: 40px;
+        font-size: 1.1rem;  
+    }
+    .placementBtn {
+        display: flex;
+        flex-direction: row;        
+    }
+    .placementBtn button {
+        margin-right: 10rem;
+        padding-right: 4rem;    
+    }
+    .placementBtn button i {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0.5rem;
+    }
+    footer {
+        padding-left: 45%;
+}
+    
+
+
+
 
 
      
