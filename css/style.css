@@ -39,9 +39,8 @@ header {
     padding-bottom: 8px;
     position: sticky;
 }
-header div {
-    position: sticky;
-    top: 0;
+header:hover {
+    cursor:pointer;
 }
 /*Recherche/ville*/
 .rechercheVille {
@@ -149,12 +148,14 @@ button {
     box-shadow: 0 0 14px #BBB;
     color:black;
     position: relative;
+    transition: duration 400ms;
 }
 
 
 .placementBtn button:hover {
     background-color: rgba(193, 149, 225, 0.103);
     cursor: pointer;
+    transform: scale(1.05);
 }
 .placementBtn button:hover >i {
     cursor: pointer;
@@ -231,7 +232,7 @@ a {
     width: 5rem;
     background-color:#99E2D0;
     font-family: roboto;
-    color: black
+    color: black;
     text-align: center;
     display: grid;
     place-items: center;
@@ -250,7 +251,12 @@ a {
     height: 270px;
     margin: 0 1% 0 1%;
     background: white; 
+    transition: duration 400ms;   
 }
+.carteResto:hover {
+    transform: scale(1.05);
+}
+
 .carteResto div:first-child {
     background-size: cover;
     background-position: center;
@@ -304,9 +310,18 @@ a {
 footer {
     font-family: roboto;
     padding: 20px;
+    padding-bottom: 1.5rem;
+    padding-left: 35px;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.747);
     color: rgba(255, 255, 255, 0.986);
+}
+footer a {
+    decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration-line: underline;
 }
 .logofooter {
     font-family:shrikhand;
@@ -362,8 +377,8 @@ footer div i {
        margin-top: 0px;
     }
     footer {
-        padding-left: 45%;
-}
+        text-align: center;
+    }
 }
 @media screen and (min-width: 900px) {
     .btnExplorer {
@@ -388,8 +403,8 @@ footer div i {
         padding: 0.5rem;
     }
     footer {
-        padding-left: 45%;
-}
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1300px) {
     .btnExplorer {
@@ -414,7 +429,8 @@ footer div i {
         padding: 0.5rem;
     }
     footer {
-        padding-left: 45%;
+        text-align: center;
+    }
 }
     
 
