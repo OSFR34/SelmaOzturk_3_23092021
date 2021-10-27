@@ -12,12 +12,13 @@ body {
     font-family: "roboto", sans-serif;
 }
 main {
-    padding: 0px;
-    font-family: roboto;    
+    padding: 0;
+    font-family: roboto;
+    /* margin:0 0.3rem 0 0.3rem;    */
 }
 #blocPage {
     max-width: 1500px;
-    min-width: 335px;
+    min-width: 350px;
     margin: 0 auto;
 
 }
@@ -149,6 +150,17 @@ button {
     color:black;
     position: relative;
 }
+
+
+.placementBtn button:hover {
+    background-color: rgba(193, 149, 225, 0.103);
+    cursor: pointer;
+}
+.placementBtn button:hover >i {
+    cursor: pointer;
+    color: #9356DC;
+       
+}
 .placementBtn button i {
     justify-content: flex-start;
     padding-right: 0.5rem;
@@ -177,6 +189,7 @@ span {
     font-size: 60px;
 }
 /* Restos */
+
 #blocRestos {
     height: auto;
     display: flex;
@@ -185,20 +198,30 @@ span {
     background:rgba(196, 193, 193, 0.212);
     margin-top: 60px;
 }
-.blocCartesRestos {
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-gap: 23px;
+.blocCartesRestos1 {
+    display: flex;
+    flex-direction: wrap;
+    gap: 0.5rem;
     height: auto;
     padding-left: 0;
+    padding-right: 0;
     margin:0;
+    margin-bottom: 2rem;
 }
 a {
     text-decoration: none;
     color:black;
 }
+.blocCartesRestos2 {
+    display: flex;
+    flex-direction: wrap;
+    gap: 0.5rem;
+    height: auto;
+    padding-left: 0;
+    margin:0;
+    margin-bottom: 2rem;
+}
 .new {
-    border: 1px solid red;
     position: relative;
 }
 .new::before {
@@ -207,25 +230,25 @@ a {
     height: 2rem;
     width: 5rem;
     background-color:#99E2D0;
-    /* color: darken(#99E2D0, 70%); */
+    font-family: roboto;
     color: black
     text-align: center;
     display: grid;
     place-items: center;
     right: 1rem;
     top: 1rem;
-    border-radius: 2px;
-
-    
+    border-radius: 2px;    
 }
 
 .carteResto {
     position:relative;
-    width: 96%;
+    /* flex-grow: 1; */
+    /* min-width: 30rem; */
+    width: 100%;
     border-radius:15px;
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     height: 270px;
-    margin: 0 2% 0 2%;
+    margin: 0 1% 0 1%;
     background: white; 
 }
 .carteResto div:first-child {
@@ -298,6 +321,22 @@ footer div i {
     line-height: 25px;
 }
 /* Responsive */
+@media screen and (min-width: 350px) and (max-width:799px) {
+    .blocCartesRestos1 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.75rem;
+    }
+    .blocCartesRestos2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+   }
+   .carteResto {
+       margin-bottom: 1.5rem;
+   }
+}
+
 @media screen and (min-width: 800px) and (max-width:899px) {
     .placementBtn {
         display: flex;
@@ -322,6 +361,9 @@ footer div i {
     #blocRestos {
        margin-top: 0px;
     }
+    footer {
+        padding-left: 45%;
+}
 }
 @media screen and (min-width: 900px) {
     .btnExplorer {
@@ -345,6 +387,9 @@ footer div i {
         margin-right: 0.1 rem;
         padding: 0.5rem;
     }
+    footer {
+        padding-left: 45%;
+}
 }
 @media screen and (min-width: 1300px) {
     .btnExplorer {
