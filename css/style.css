@@ -1,14 +1,188 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+
+::-webkit-scrollbar {
+    display: none;
+}
 *,
+
 ::before,
 ::after {
     box-sizing: border-box;
     /* border: 1px solid; */
 }
+/* -----------------------------------------------------------------
+ecranBlanc = div de premier plan opaque blanche qui apparaît au chargement puis 
+qui s'estompe en transparence et disparaît
+Cette Div contient les demiCercles
+--------------------------------------------------------------------- */
+
+
+
+.ecranBlanc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;/* met au premier plan (axe des z= hauteur et profondeur) */
+    background-color: rgba(255,255,255,0);
+    animation: fadeInAnimation ease-out 2s; 
+    animation-fill-mode: backwards; 
+    animation-iteration-count: 1;   
+  }
+  /* -------------------------------------------------------
+  demiCercle = Cercles partiels concentriques qui apparaissent au début du chargement 
+  et disparaissent 1/10 de seconde après la Div " ecranBlanc" (pour
+  un meilleur effet)
+  ------------------------------------------------------------------ */
+  
+  .demiCercle1 {
+    width: 40px;
+    height: 40px;
+    /* z-index: 10000; */
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 6px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-top-color: #FF79DA;
+    /* border-bottom-color: #99E2D0; */
+    border-left-color:#FF79DA;
+    /* border-right-color:#99E2D0; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 2.1s, reverse linear infinite;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  .demiCercle2 {
+    width: 60px;
+    height: 60px;
+    /* z-index: 10000; */
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 6px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    /* border-top-color: #FF79DA; */
+    border-bottom-color: #99E2D0;
+    border-left-color:#99E2D0;
+    /* border-right-color:#99E2D0; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinreverse 2.1s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+  
+  .demiCercle3 {
+    width: 80px; 
+    height: 80px;
+    /* z-index: 10000; */
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 6px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    /* border-top-color: #9356DC; */
+    border-bottom-color: #9356DC;
+    /* border-left-color:#9356DC; */
+    border-right-color:#9356DC;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 2.1s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+      
+  .demiCercle4 {
+    width: 100px; 
+    height: 100px;
+    /* z-index: 10000; */
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 6px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-top-color: #FF79DA;
+    /* border-bottom-color: #FF79DA; */
+    /* border-left-color:#FF79DA; */
+    border-right-color:#FF79DA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinreverse 2.1s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+  
+    .demiCercle5 {
+      width: 120px; 
+      height: 120px;
+      /* z-index: 10000; */
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      border: 6px solid rgba(255,255,255,0);
+      border-radius: 50%;
+      border-top-color: #99E2D0;
+      /* border-bottom-color: #99E2D0; */
+      border-left-color:#99E2D0;
+      /* border-right-color:#99E2D0; */
+      position: absolute;
+      top: 50%;
+      left: 50%;  
+      animation: spin 2.1s, linear infinite;  
+      animation-fill-mode: forwards;  
+      }
+  
+  
+      /* --------------------------------------------------------
+                    PARAMETRAGE DES ANIMATIONS
+      ------------------------------------------------------------ */
+  
+      @keyframes spin {
+        0% {
+          transform: translate(-50%,-50%) rotate(0deg) ;
+          opacity: 1;
+        }
+        99.999% {
+          transform: translate(-50%,-50%) rotate(800deg) ;
+          opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+      }
+  
+      @keyframes spinreverse {
+        0% {
+          transform: translate(-50%,-50%) rotate(0deg) ;
+          opacity: 1;
+        }
+        99.999% {
+          transform: translate(-50%,-50%) rotate(-800deg) ;
+          opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+      }
+      @keyframes fadeInAnimation { 
+        0% { 
+          background-color: rgba(255,255,255,1); 
+        }
+        40% {
+          background-color: rgba(255,255,255,1);
+        }
+        99.999% {
+          background-color: rgba(255,255,255,0.8);
+        } 
+        100% { 
+          background-color: rgba(255,255,255,0);
+        }
+      }
 body {
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: "roboto", sans-serif;
 }
 main {
@@ -17,7 +191,7 @@ main {
     /* margin:0 0.3rem 0 0.3rem;    */
 }
 #blocPage {
-    max-width: 1500px;
+    max-width: 1920px;
     min-width: 350px;
     margin: 0 auto;
 
@@ -26,7 +200,7 @@ main {
     background:rgba(196, 193, 193, 0.212);
     margin: 0;
 }
-/* Fin general */
+/*Fin general*/
 
 header {
     font-family: 'Shrikhand', cursive;
@@ -34,10 +208,9 @@ header {
     letter-spacing: 0.4px;
     text-align: center;
     justify-content: center;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.356);;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.233);
     padding-top: 15px;
     padding-bottom: 8px;
-    position: sticky;
 }
 header:hover {
     cursor:pointer;
@@ -75,6 +248,8 @@ header:hover {
 .slogan2 {
     padding-top: 4%;
     padding-bottom: 1.2%;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align: center;
     font-size: 1.15rem;
     color:rgba(0, 0, 0, 0.562);
@@ -106,34 +281,38 @@ header:hover {
     display: flex;
     justify-content: center;
 }
-.margesTitresSecondaires {
+.margesTitresSecondaires {    
     padding: 22px 0 15px 15px;
 }
 /* Fonctionnement */
 #blocFonctionnement {
     margin: 10px;
-    width: 100%;
     height: auto;
+    
 }
 button {
-    width: 93%;
+    border: 1px solid red;
+    width: 25%;
     padding: 1.5rem;
     height: 74px;
     margin: 6% 2% 6% 3%;
     border-radius: 37px;
     font-size: 0.98rem;
-    /* font-weight: bold; */
     font-family: roboto;
     border: 0;    
     display: flex;
     justify-content: center;
     text-align: center;
-    /* box-shadow: rgba(0, 0, 0, 0.137) 3px 3px 3px 0.5px; */
-    color: white;    
+    color: white; 
+    white-space: nowrap;   
 }
 
-.placementBtn button {
-    border: 1px solid blue;
+#placementBtn {
+    border: 1px solid green;
+    
+}
+
+#placementBtn button {    
     width: 90%;
     padding: 1rem;
     border-radius: 18px;
@@ -144,25 +323,23 @@ button {
     justify-content: flex-start;
     text-align: center;
     align-items: center;
-    /* box-shadow: rgba(0, 0, 0, 0.082) 2px 2px 2px; */
     box-shadow: 0 0 14px #BBB;
     color:black;
     position: relative;
     transition: duration 400ms;
 }
 
-
-.placementBtn button:hover {
+#placementBtn button:hover {
     background-color: rgba(193, 149, 225, 0.103);
     cursor: pointer;
     transform: scale(1.05);
 }
-.placementBtn button:hover >i {
+#placementBtn button:hover >i {
     cursor: pointer;
     color: #9356DC;
        
 }
-.placementBtn button i {
+#placementBtn button i {
     justify-content: flex-start;
     padding-right: 0.5rem;
     padding-left: 1.5rem;
@@ -243,8 +420,6 @@ a {
 
 .carteResto {
     position:relative;
-    /* flex-grow: 1; */
-    /* min-width: 30rem; */
     width: 100%;
     border-radius:15px;
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
@@ -254,7 +429,7 @@ a {
     transition: duration 400ms;   
 }
 .carteResto:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .carteResto div:first-child {
@@ -262,7 +437,7 @@ a {
     background-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height: 72%;    
+    height: 72%;
 }
 .imgResto1 {
     background-image: url("../img/resto1.jpg");   
@@ -317,7 +492,7 @@ footer {
     color: rgba(255, 255, 255, 0.986);
 }
 footer a {
-    decoration: none;
+    text-decoration: none;
     color: white;
 }
 footer a:hover {
@@ -329,14 +504,14 @@ footer a:hover {
     letter-spacing: 1.4px;
     padding-bottom: 18px;
 }
-footer div i {
+.fa-utensils, .fa-hands-helping {
     margin-right: 15px;
 }
 .finitionsFooter {
     line-height: 25px;
 }
 /* Responsive */
-@media screen and (min-width: 350px) and (max-width:799px) {
+@media screen and (min-width: 50px) and (max-width:799px) {
     .blocCartesRestos1 {
         display: flex;
         flex-direction: column;
@@ -353,15 +528,16 @@ footer div i {
 }
 
 @media screen and (min-width: 800px) and (max-width:899px) {
-    .placementBtn {
+    #placementBtn {
         display: flex;
         flex-direction: row;        
     }
-    .placementBtn button {
+    #placementBtn button {
         margin: 0.9rem;
-        margin-bottom: 2.5rem;                
+        margin-bottom: 2.5rem;
+        width: auto;                
     }
-    .placementBtn button i {
+    #placementBtn button i {
         margin-right: 0;
         padding: 0.7rem;
     }    
@@ -381,24 +557,41 @@ footer div i {
     }
 }
 @media screen and (min-width: 900px) {
+    header {       
+        font-size: 2.7rem;
+    }
+    .margesRechercher {
+        font-size: 1.3rem;
+    }
+    .slogan {
+        font-size:xx-large; 
+    }
+    .slogan2 {
+        font-size:x-large;
+    }
     .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
         width: 40%;
-        height: auto;
+        height: 4rem;
         border-radius: 40px;
-        font-size: 1.1rem;  
+        font-size: 1.3rem;         
     }
-    .placementBtn {
+    h1 {
+        font-size: 1.8rem;
+        padding-left: 2rem;
+    }
+    #placementBtn {
         display: flex;
         flex-direction: row;        
     }
-    .placementBtn button {
+    #placementBtn button {
         margin-right: 2.7rem;
-        padding-right: 4rem;
-        margin-left: 0.8rem;    
+        padding-right: 1.5rem;
+        margin-left: 0.8rem;
+        font-size: large;    
     }
-    .placementBtn button i {
+    #placementBtn button i {
         margin-right: 0.1 rem;
         padding: 0.5rem;
     }
@@ -407,23 +600,38 @@ footer div i {
     }
 }
 @media screen and (min-width: 1300px) {
+    h1 {
+        font-size: 1.8rem;
+        padding-left: 2rem;
+    }
+    .margesRechercher {
+        font-size: 1.3rem;
+    }
+    .slogan {
+        font-size:xx-large; 
+    }
+    .slogan2 {
+        font-size:x-large;
+
+    }
     .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
         width: 40%;
-        height: auto;
+        height: 4rem;
         border-radius: 40px;
-        font-size: 1.1rem;  
+        font-size: 1.3rem;
+         
     }
-    .placementBtn {
+    #placementBtn {
         display: flex;
         flex-direction: row;        
     }
-    .placementBtn button {
+    #placementBtn button {
         margin-right: 10rem;
         padding-right: 4rem;    
     }
-    .placementBtn button i {
+    #placementBtn button i {
         margin-right: 1rem;
         margin-left: 1rem;
         padding: 0.5rem;

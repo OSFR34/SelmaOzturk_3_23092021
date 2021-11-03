@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: "roboto", sans-serif;
+}
+main {
+    padding: 0;
+    font-family: roboto;
+    /* margin:0 0.3rem 0 0.3rem;    */
+}
+#blocPage {
+    max-width: 1400px;
+    min-width: 350px;
+    margin: 0 auto;
+}
+.backGris {
+    background: #f6f6f6;
+    margin: 0;
+    padding-top: 1.3rem;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+h1 {
+    padding-left: 1rem;
+    font-style: oblique 10deg;
+    font-family: Shrikhand;
+    font-size:1.8rem;
+    letter-spacing: 1.3px;
+    /* display: flex; */
+    /* justify-content: start; */
+    padding-left: 8px;
+    margin-top: 10px;
+}
+h3 {
+    text-transform: uppercase;
+    padding-left: 8px;
+    padding-top: 5px;
+    color: rgba(97, 96, 96, 0.877);
+    font-weight: normal;
+}
+/* Fin general */
+
+header {
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.356);
+    padding-top: 15px;
+    padding-bottom: 8px;
+    position: sticky;
+}
+/* Main */
+#boxImg {
+    height: 300px ;
+    width: 100%;
+    background-image: url("../img/resto1.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#conteneurCarte {  
+    margin-top:-50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: auto;
+    border: 2px solid pink;   
+}
+.boxChoixMenu {
+    width: 100% auto;
+    height: 4.5rem;
+    box-shadow: 0px 8px 12px -6px rgba(0, 0, 0, 0.356);
+    background-color: white;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    padding-left: 0.8rem;
+    padding-top: 0.5rem;   
+}
+.nomPreparation {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.658);
+    padding-top: 0.2rem;
+    line-height: 1.6;   
+    
+}
+/* .nomPreparation div {
+    width: 100% auto;
+    height: 4.5rem;
+} */
+.boxMenuPrix {
+    width: 97%;
+    height: 25px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    /* border: 2px solid blue; */
+    font-size: 15px;
+    font-family: roboto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 2vh;
+    
+
+} 
+.detailsMenu {
+    /* border: 2px solid red;  */
+    width: 70%;
+    font-weight:normal;
+    font-size: 1.05rem;
+   
+}
+
+
+
+/* coeur et animation */
+.carteResto .blocCoeur {
+    position: relative;
+    bottom: 30px;
+    right: 15px;
+    width: 100% auto;
+}
+.blocCoeur img {
+    top: 350px;
+    width: 29px;  
+    height: 29px;  
+    position: absolute;  
+    right: 45px;  
+    bottom: 0; 
+    border: 2px solid red; 
+}
+.blocCoeur img:last-child {
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+.blocCoeur img:last-child:hover{
+    opacity: 1;
+}
+
+.btnExplorer {
+    padding-top: 1.03rem;
+    padding-bottom:1.03rem;
+    width: 61%;
+    height: auto;
+    border-radius: 40px;
+    font-size: 0.96rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: roboto;
+    background: linear-gradient(#ff79d9d8, #9256dce1);
+    font-weight: normal;
+    transition: filter eas 0.8s;
+    margin-bottom: 60px;
+    box-shadow:0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
+}
+.btnExplorer:hover {
+    transition-duration: 200ms;
+    transform: scale(1.02);
+    filter:brightness(1.1);
+    box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
+    cursor:pointer;
+}
+.centrageBtnExplorer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* section footer */
+footer {
+    font-family: roboto;
+    padding: 20px;
+    padding-bottom: 1.5rem;
+    padding-left: 35px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.747);
+    color: rgba(255, 255, 255, 0.986);
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration-line: underline;
+}
+.logofooter {
+    font-family:shrikhand;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding-bottom: 18px;
+}
+footer div i {
+    margin-right: 15px;
+}
+.finitionsFooter {
+    line-height: 25px;
+}
