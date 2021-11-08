@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar { erreur validateur webkit*/
+    ::-webkit-scrollbar {
     display: none;
 }
 *,
@@ -11,6 +11,7 @@
 ::after {
     box-sizing: border-box;
 }
+
 /* -----------------------------------------------------------------
 ecranBlanc = div de premier plan opaque blanche qui apparaît au chargement puis 
 qui s'estompe en transparence et disparaît
@@ -42,16 +43,16 @@ Cette Div contient les demiCercles
     height: 40px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;  
-    border: 8px solid rgba(255,255,255,0);
+    border: 3px solid rgba(255,255,255,0);
     border-radius: 50%;
-    border-top-color: #FF79DA;
-    border-left-color:#FF79DA;
+    border-top-color: #9356DC;
+    border-bottom-color:#9356DC;
     position: absolute;
     top: 50%;
     left: 50%;
     animation: spin 2.5s, reverse linear infinite;
     animation-fill-mode: forwards;
-    }
+    } 
 
 
     .demiCercle2 {
@@ -60,10 +61,10 @@ Cette Div contient les demiCercles
     height: 60px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;  
-    border: 8px solid rgba(255,255,255,0);
+    border: 4px solid rgba(255,255,255,0);
     border-radius: 50%;
-    border-bottom-color: #99E2D0;
-    border-left-color:#99E2D0;
+    border-right-color: #FF79DA;
+    border-left-color:#FF79DA;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,10 +78,10 @@ Cette Div contient les demiCercles
     height: 80px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;  
-    border: 8px solid rgba(255,255,255,0);
+    border: 6px solid rgba(255,255,255,0);
     border-radius: 50%;
     border-bottom-color: #9356DC;
-    border-right-color:#9356DC;
+    border-top-color:#9356DC;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -94,9 +95,9 @@ Cette Div contient les demiCercles
     height: 100px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;  
-    border: 8px solid rgba(255,255,255,0);
+    border: 9px solid rgba(255,255,255,0);
     border-radius: 50%;
-    border-top-color: #FF79DA;
+    border-left-color: #FF79DA;
     border-right-color:#FF79DA;
     position: absolute;
     top: 50%;
@@ -111,12 +112,10 @@ Cette Div contient les demiCercles
     height: 120px;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    border: 8px solid rgba(255,255,255,0);
+    border: 12px solid rgba(255,255,255,0);
     border-radius: 50%;
-    border-top-color: #99E2D0;
-    /* border-bottom-color: #99E2D0; */
-    border-left-color:#99E2D0;
-    /* border-right-color:#99E2D0; */
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -136,7 +135,7 @@ Cette Div contient les demiCercles
         z-index: 4;
         }
         99.999% {
-        transform: translate(-50%,-50%) rotate(800deg) ;
+        transform: translate(-50%,-50%) rotate(810deg) ;
         opacity: 1;
         z-index: 4;
         }
@@ -153,7 +152,7 @@ Cette Div contient les demiCercles
         z-index: 4;
         }
         99.999% {
-        transform: translate(-50%,-50%) rotate(-800deg) ;
+        transform: translate(-50%,-50%) rotate(-810deg) ;
         opacity: 1;
         z-index: 4;
         }
@@ -180,6 +179,8 @@ Cette Div contient les demiCercles
         z-index: -5;
         }
     }
+
+/* Fin loader */
     
 body {
     padding: 0;
@@ -192,7 +193,7 @@ main {
     
 }
 #blocPage {
-    max-width: 1980px;
+    max-width: 1350px;
     min-width: 350px;
     margin: 0 auto;
 
@@ -219,9 +220,6 @@ header:hover {
     cursor:pointer;
 }
 
-
-
-
 /*Recherche/ville*/
 .rechercheVille {
     display: flex;
@@ -244,17 +242,17 @@ header:hover {
     text-align: center;
     align-items: center;
 }
-.slogan {
-    padding-top: 9%;
-    padding-left: 15%;
-    padding-right: 15%;
+.slogan1 {
+    padding-top: 8%;
+    padding-left: 12%;
+    padding-right: 12%;
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
 }
 .slogan2 {
     padding-top: 4%;
-    padding-bottom: 1.2%;
+    padding-bottom: 3%;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
@@ -406,7 +404,6 @@ span {
 }
 .blocCartesRestos1 {
     display: flex;
-    flex-direction: wrap;
     gap: 0.5rem;
     height: auto;
     padding-left: 0;
@@ -420,7 +417,7 @@ a {
 }
 .blocCartesRestos2 {
     display: flex;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     gap: 0.5rem;
     height: auto;
     padding-left: 0;
@@ -539,7 +536,7 @@ footer a:hover {
     line-height: 25px;
 }
 /* Responsive */
-@media screen and (min-width: 50px) and (max-width:768px) {
+@media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
         flex-direction: column;
@@ -554,20 +551,22 @@ footer a:hover {
        margin-bottom: 1.5rem;
    }
 }
-
+@media screen and (min-width: 500px) and (max-width:768px) {
+    #placementBtn div{
+        font-size: 1rem;
+    }
+}    
 @media screen and (min-width: 769px) and (max-width:899px) {
     #placementBtn {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
+        margin-bottom: 0.9rem;        
     }
-    #placementBtn div {
-        width: 23%;
-    }
-    #placementBtn button {
-        margin: 0.9rem;
+    /* #placementBtn button {
+        ;
         margin-bottom: 2.5rem;
         width: auto;                
-    }
+    } */
     #placementBtn button i {
         margin-right: 0;
         padding: 0.7rem;
@@ -616,11 +615,12 @@ footer a:hover {
         display: flex;
         flex-direction: row;        
     }
-    #placementBtn button {
+    #placementBtn div {
         margin-right: 2.7rem;
         padding-right: 1.5rem;
         margin-left: 0.8rem;
-        font-size: large;    
+        font-size: 1rem;
+
     }
     #placementBtn button i {
         margin-right: 0.1 rem;
@@ -654,9 +654,11 @@ footer a:hover {
         font-size: 1.3rem;
          
     }
-    #placementBtn {
+    #placementBtn div{
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
+        font-size: larger; 
+        white-space: nowrap;       
     }
     #placementBtn button {
         margin-right: 10rem;
