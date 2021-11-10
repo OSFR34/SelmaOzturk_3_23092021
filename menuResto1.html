@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/restos.css">
-    <title>Document</title>
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/copie2restos.css">
+    <title>copie2menuResto1</title>
 </head>
 <body>
     <div id="blocPage">
@@ -22,95 +22,146 @@
         <main>
             <div id="boxImg"></div>            
                 <div id="conteneurCarte" class="backGris">
-                    <h1>La palette du goût</h1>
-                    <div class="blocCoeur">
-                            <img src="img/empty-heart.svg" alt="coeur vide" />
-                            <img src="img/fill-heart.svg" alt="coeur plein" />
-                    </div>
-               
+                    <div class="nomResto_et_Coeur">
+                        <h1>La palette du goût</h1>
+                        <div class="blocCoeurs">                        
+                            <img src="img/coeurVide.svg" alt="coeur vide">
+                            <img src="img/coeurPlein.svg" alt="coeur dégradé rose mauve">
+                            <div class="rideauCoeur"></div>
+                        </div>
+                    </div>               
                     <!-- section Entrées -->
-                    <section>
-                        <h3>Entrées</h3>
-                        <div class="soulignement"></div>                        
-                            <div class="boxChoixMenu">
-                                <div class="nomPreparation">Fricassée d'escargot</div>
-                                <div class="boxMenuPrix">
-                                    <div class=detailsMenu>Au piment d'Espelette</div>
-                                    <div class="taillePrix">25€</div>
+                    <div class="sectionsEntreesPlatsDesserts">
+                        <div class="sectionEntrees">
+                            <h3>Entrées</h3>
+                            <div class="soulignement"></div>
+                            <div class="boxChoixMenu1">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Fricassée d'escargot</div>
+                                    <div class="detailsMenu">Au piment d'espelette </div>
                                 </div>
-                            </div>                        
-                        <div class="boxChoixMenu">
-                            <div class="nomPreparation">Oeuf au plat</div>
-                            <div class="boxMenuPrix">
-                                <div class=detailsMenu>AAA</div>
-                                <div class="taillePrix">€</div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">25€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                            
+                            <div class="boxChoixMenu2">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Foie gras de canard mi-cuit</div>
+                                    <div class="detailsMenu">Et ses copeaux de truffe noire</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">35€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxChoixMenu3">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Oeuf au plat</div>
+                                    <div class="detailsMenu">Assaisonné à la truffe sur lit de caviar</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">20€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- section Plats -->
+                        <div class="sectionPlats">
+                            <h3>Plats</h3>
+                            <div class="soulignement"></div>
+                            <div class="boxChoixMenu1">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Filet de boeuf aux herbes</div>
+                                    <div class="detailsMenu">Accompagné de sa ribambelle de légumes</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">40€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxChoixMenu2">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Parmentier de queue de boeuf</div>
+                                    <div class="detailsMenu">À la truffe noire sur sa purée de panais</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">35€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxChoixMenu3">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Filet de turbot</div>
+                                    <div class="detailsMenu">Aux agrumes</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">44€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="boxChoixMenu">
-                            <div class="nomPreparation">AAA</div>
-                            <div class="boxMenuPrix">
-                                <div class=detailsMenu>AAA</div>
-                                <div class="taillePrix">€</div>
+                        <!-- section Desserts -->
+                        <div class="sectionDesserts">
+                            <h3>Desserts</h3>
+                            <div class="soulignement"></div>
+                            <div class="boxChoixMenu1">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Paris-Brest</div>
+                                    <div class="detailsMenu">Revisité</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">18€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <!-- section Plats -->
-                    <section>
-                        <h3>Plats</h3>
-                        <div class="soulignement"></div>
-                        <div class="boxChoixMenu">
-                            <div class="nomPreparation">AAA</div>
-                            <div class="boxMenuPrix">
-                                <div class=detailsMenu>AAA</div>
-                                <div class="taillePrix">€</div>
+                            <div class="boxChoixMenu2">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Macaron au chocolat d'exception </div>
+                                    <div class="detailsMenu">Et glace à la vanille de Madagascar</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">22€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="boxChoixMenu">
-                            <div class="nomPreparation">AAA</div>
-                            <div class="boxMenuPrix">
-                                <div class=detailsMenu>AAA</div>
-                                <div class="taillePrix">€</div>
+                            <div class="boxChoixMenu3">
+                                <div class="boxTextes">
+                                    <div class="nomPreparation">Mousse au chocolat</div>
+                                    <div class="detailsMenu">Au piment d'Espelette et à la truffe noire</div>
+                                </div>
+                                <div class="boxPrixCheck">
+                                    <div class="elemPrix">23€</div>
+                                    <div class="boxCheck">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="boxChoixMenu">
-                            <div class="nomPreparation">AAA</div>
-                            <div class="boxMenuPrix">
-                                <div class=detailsMenu>AAA</div>
-                                <div class="taillePrix">€</div>
-                            </div>
-                        </div>       
-                    </section>
-                    <!-- Section Desserts -->
-                    <section>
-                    <h3>Desserts</h3>
-                    <div class="soulignement"></div>
-                    <div class="boxChoixMenu">
-                        <div class="nomPreparation">AAA</div>
-                        <div class="boxMenuPrix">
-                            <div class=detailsMenu>AAA</div>
-                            <div class="taillePrix">€</div>
                         </div>
                     </div>
-                    <div class="boxChoixMenu">
-                        <div class="nomPreparation">AAA</div>
-                        <div class="boxMenuPrix">
-                            <div class=detailsMenu>AAA</div>
-                            <div class="taillePrix">€</div>
-                        </div>
-                    </div>
-                    <div class="boxChoixMenu">
-                        <div class="nomPreparation">AAA</div>
-                        <div class="boxMenuPrix">
-                            <div class=detailsMenu>AAA</div>
-                            <div class="taillePrix">€</div>
-                        </div>
-                    </div>
-                    </section>
                     <div class="positionBtnCommander">
                         <p class="btnCommander">Commander</p>
                     </div>
-                </div>     
-            
+    
         </main>
         <!-- Fin main -->
         <footer>
