@@ -418,12 +418,11 @@ a {
 }
 
 /* Responsive */
-@media screen and (min-width: 760px) and (max-width: 768px) {
+@media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
         flex-direction: column;
         margin-bottom: 0.75rem;
-        /* margin-bottom: 2rem; */
 }
     .blocCartesRestos2 {
         display: flex;
@@ -435,7 +434,7 @@ a {
    }
 }
 @media screen and (min-width: 500px) and (max-width:768px) {
-    #placementBtn div{
+    #placementBtn div {
         font-size: 1rem;
     }
 }    
@@ -445,11 +444,7 @@ a {
         flex-direction: row;
         margin-bottom: 0.9rem;        
     }
-    /* #placementBtn button {
-        ;
-        margin-bottom: 2.5rem;
-        width: auto;                
-    } */
+  
     #placementBtn button i {
         margin-right: 0;
         padding: 0.7rem;
@@ -463,12 +458,8 @@ a {
         font-size: 1.1rem;  
     }
     #blocRestos {
-       margin-top: 0px;
-      
-    }
-    /* footer {
-        text-align: center;
-    } */
+       margin-top: 0px;      
+    }   
 }
 @media screen and (min-width: 900px) {
     header {       
@@ -500,7 +491,6 @@ a {
         flex-direction: row;        
     }
     #placementBtn div {
-        /* margin-right: 2.7rem; */
         padding-right: 1.5rem;
         margin-left: 0.8rem;
         font-size: 1rem;
@@ -509,10 +499,7 @@ a {
     #placementBtn button i {
         margin-right: 0.1rem;
         padding: 0.5rem;
-    }
-    /* footer {
-        text-align: center;
-    } */
+    }  
 }
 @media screen and (min-width: 1300px) {
     h1 {
@@ -527,13 +514,12 @@ a {
     }
     .slogan2 {
         font-size:x-large;
-
     }
     .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
         width: 40%;
-        height: 4rem;
+        height: 3.5rem;
         border-radius: 40px;
         font-size: 1.3rem;         
     }
@@ -551,8 +537,7 @@ a {
         margin-right: 1rem;
         margin-left: 1rem;
         padding: 0.5rem;
-    }
-   
+    }   
 }
     
 

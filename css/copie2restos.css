@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
+@import url('footer.css');
 *,
 ::before,
 ::after {
@@ -508,7 +508,11 @@ footer div i {
 }
 /*----------- Responsive-------------- */
 
-
+@media screen and (min-width: 766px) {
+    .btnCommander {
+        width: 25%;
+    }
+}
 
 
 @media screen and (min-width: 1000px)  {
@@ -516,16 +520,14 @@ footer div i {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 4vh 1% 0vh 1%; 
-        background-color: yellow; 
-
+        padding: 0.5vh 1% 0vh 1%; 
     } 
     .sectionEntrees, .sectionPlats, .sectionDesserts {
         padding: 0 1% 0 1.5%; 
         width: 100%;          
     } 
     #boxImg {
-        height: 30vh ;
+        height: 33vh ;
     }
 
     .backGris {
@@ -534,4 +536,15 @@ footer div i {
        
     }
     
+}
+@media screen and (min-width: 1024px) {
+    .btnCommander {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #boxImg {
+        height: 40vh ;
+    }
+
 }

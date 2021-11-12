@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('footer.css');
+@import url('loader.css');
 /* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
     display: none;
@@ -12,116 +13,6 @@
     box-sizing: border-box;
 }
 
-/* -----------------------------------------------------------------
-ecranBlanc = div de premier plan opaque blanche qui apparaît au chargement puis 
-qui s'estompe en transparence et disparaît
-Cette Div contient les demiCercles
---------------------------------------------------------------------- */
-
-    .ecranBlanc {
-    z-index: -5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -9999;
-    background-color: rgba(255,255,255,0);
-    animation: fadeInAnimation ease-out 2s; 
-    animation-fill-mode: backwards; 
-    animation-iteration-count: 1;   
-    }
-    /* -------------------------------------------------------
-    demiCercle = Cercles partiels concentriques qui apparaissent au début du chargement 
-    et disparaissent 1/10 de seconde après la Div " ecranBlanc" (pour
-    un meilleur effet)
-    ------------------------------------------------------------------ */
-
-    .demiCercle1 {
-    z-index: -5; 
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 3px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    border-bottom-color:#9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spin 2.5s, reverse linear infinite;
-    animation-fill-mode: forwards;
-    } 
-
-
-    .demiCercle2 {
-    z-index: -5;
-    width: 60px;
-    height: 60px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 4px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-right-color: #FF79DA;
-    border-left-color:#FF79DA;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spinreverse 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle3 {
-    z-index: -5;
-    width: 80px; 
-    height: 80px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 6px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-bottom-color: #9356DC;
-    border-top-color:#9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spin 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle4 {
-    z-index: -5;
-    width: 100px; 
-    height: 100px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 9px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-left-color: #FF79DA;
-    border-right-color:#FF79DA;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spinreverse 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle5 {
-    z-index: -5;
-    width: 120px; 
-    height: 120px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    border: 12px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;  
-    animation: spin 2.5s, linear infinite;  
-    animation-fill-mode: forwards;  
-    }
 
 
     /* --------------------------------------------------------
@@ -506,9 +397,6 @@ a {
     text-overflow: ellipsis;   
 }
 .blocCoeurs {
-    /* z-index:3; */
-    /* background-color: #acacac; */
-    /* border:#99E2D0 1px solid; */
     position: relative;
     display:flex ;
     justify-content:center; 
@@ -531,9 +419,7 @@ a {
     opacity: 1;
     height: 1.688rem;
     width: 1.938rem;
-    /* transition: 400ms ease-in-out; */
 }
-    /* .blocCoeurs :nth-child(3):hover .blocCoeurs :nth-child(1) { */
 .blocCoeurs:hover :nth-child(1) {
     opacity: 0;
     transition: 1s ease-out;
@@ -602,7 +488,7 @@ a {
    }
 }
 @media screen and (min-width: 500px) and (max-width:768px) {
-    #placementBtn div{
+    #placementBtn div {
         font-size: 1rem;
     }
 }    
@@ -612,11 +498,7 @@ a {
         flex-direction: row;
         margin-bottom: 0.9rem;        
     }
-    /* #placementBtn button {
-        ;
-        margin-bottom: 2.5rem;
-        width: auto;                
-    } */
+  
     #placementBtn button i {
         margin-right: 0;
         padding: 0.7rem;
@@ -631,10 +513,7 @@ a {
     }
     #blocRestos {
        margin-top: 0px;
-    }
-    footer {
-        text-align: center;
-    }
+    }  
 }
 @media screen and (min-width: 900px) {
     header {       
@@ -666,7 +545,6 @@ a {
         flex-direction: row;        
     }
     #placementBtn div {
-        margin-right: 2.7rem;
         padding-right: 1.5rem;
         margin-left: 0.8rem;
         font-size: 1rem;
@@ -675,9 +553,6 @@ a {
     #placementBtn button i {
         margin-right: 0.1 rem;
         padding: 0.5rem;
-    }
-    footer {
-        text-align: center;
     }
 }
 @media screen and (min-width: 1300px) {
@@ -693,7 +568,6 @@ a {
     }
     .slogan2 {
         font-size:x-large;
-
     }
     .btnExplorer {
         padding-top: 1.3rem;
@@ -701,8 +575,7 @@ a {
         width: 40%;
         height: 4rem;
         border-radius: 40px;
-        font-size: 1.3rem;
-         
+        font-size: 1.3rem;         
     }
     #placementBtn div{
         display: flex;
@@ -718,9 +591,6 @@ a {
         margin-right: 1rem;
         margin-left: 1rem;
         padding: 0.5rem;
-    }
-    footer {
-        text-align: center;
     }
 }
     

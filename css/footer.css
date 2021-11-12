@@ -8,13 +8,13 @@
     
 .boxFooter {
     font-family: roboto;
-    padding: 20px;
+    /* padding: 20px; */
     padding-bottom: 1.5rem;
-    padding-left: 25px;
-    height: 200px;    
+    /* padding-left: 25px; */
+     
     color: rgba(255, 255, 255, 0.986);
-    
-   
+    max-width: 1200px;
+    margin: auto;  
 }
 footer a {
     text-decoration: none;
@@ -34,11 +34,4 @@ footer a:hover {
 }
 .finitionsFooter {
     line-height: 25px;
-}
- @media  and (min 1200px) {
-    footer {
-        max-width: 1140px;
-        margin:  auto
-    } 
-    
 }
