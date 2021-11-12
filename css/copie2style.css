@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
+@import url('footer.css');
 /* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
     display: none;
@@ -290,9 +290,10 @@ header:hover {
     text-align: center;
 }
 .btnExplorer {
+    white-space: nowrap;
     padding-top: 1.03rem;
     padding-bottom:1.03rem;
-    width: 61%;
+    width: 59%;
     height: auto;
     border-radius: 40px;
     font-size: 0.96rem;
@@ -301,7 +302,7 @@ header:hover {
     font-family: roboto;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
-    transition: filter eas 0.8s;
+    transition: filter ease 0.8s;
     margin-bottom: 60px;
     box-shadow:0px 0px 10px 0px  rgba(236, 234, 234, 0.356)  
 }
@@ -317,7 +318,7 @@ header:hover {
     justify-content: center;
 }
 .margesTitresSecondaires {    
-    padding: 22px 0 15px 35px;
+    padding: 22px 0 0x 35px;
 }
 /* Fonctionnement */
 
@@ -329,13 +330,13 @@ header:hover {
     border-radius: 20px;
     font-size: 0.98rem;
     font-family: roboto;
-    font-weight: regular;
+    font-weight: normal;
     border: 0;
     background:rgba(236, 234, 234, 0.356);
     text-align: center;
     box-shadow: 0 0 14px #BBB;
     color:black;
-    transition: duration 400ms;
+    transition: transform ease 400ms;
     position:relative;
 
 }
@@ -344,7 +345,7 @@ header:hover {
 
     /* display:flex; */
     padding:15px;
-    gap:30px;
+    gap:25px;
     display: flex;
     flex-direction: column;
     padding-left: 25px;
@@ -453,7 +454,7 @@ a {
     height: 270px;
     margin: 0 1% 0 1%;
     background: white; 
-    transition: duration 400ms;   
+    transition: transform ease 400ms;   
 }
 .carteResto:hover {
     transform: scale(1.01);
@@ -464,7 +465,7 @@ a {
     background-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height: 72%;
+    height: 70%;
 }
 .imgResto1 {
     background-image: url("../img/resto1.jpg");   
@@ -478,64 +479,111 @@ a {
 .imgResto4 {
     background-image: url("../img/resto4.jpg");   
 }
+.boxRestoQuartier_et_blocCoeurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+.boxRestoQuartier {
+    display: flex;
+    flex-direction: column;
+}
 .nomResto {
     font-size: 18px;
     font-weight: bolder;
     padding: 15px 0 5px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .quartierResto {
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 15px;
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }
-/* coeur et animation */
-.carteResto .blocCoeur {
-    position: absolute;
-    bottom: 30px;
-    right: 15px;
-}
-.blocCoeur img {
-    width: 29px;  
-    height: 29px;  
-    position: absolute;  
-    right: 15px;  
-    bottom: 0;  
-}
-.blocCoeur img:last-child {
-    opacity: 0;
-    transition: 400ms ease-in-out;
-}
-.blocCoeur img:last-child:hover{
-    opacity: 1;
+.blocCoeurs {
+    /* z-index:3; */
+    /* background-color: #acacac; */
+    /* border:#99E2D0 1px solid; */
+    position: relative;
+    display:flex ;
+    justify-content:center; 
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;    
+    margin-left: 1.75rem;
+    margin-top: 0.813rem;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-/* section footer */
-footer {
-    font-family: roboto;
-    padding: 20px;
-    padding-bottom: 1.5rem;
-    padding-left: 35px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: rgba(255, 255, 255, 0.986);
+/*----coeur vide--------*/
+
+.blocCoeurs :nth-child(1) {
+    z-index: 2;
+    position: absolute;
+    position:center; 
+    opacity: 1;
+    height: 1.688rem;
+    width: 1.938rem;
+    /* transition: 400ms ease-in-out; */
 }
-footer a {
-    text-decoration: none;
-    color: white;
+    /* .blocCoeurs :nth-child(3):hover .blocCoeurs :nth-child(1) { */
+.blocCoeurs:hover :nth-child(1) {
+    opacity: 0;
+    transition: 1s ease-out;
+    }
+/*----coeur plein----------*/
+
+.blocCoeurs :nth-child(2) { /*----coeur plein----------*/
+    opacity: 0;
+    height: 1.438rem;
+    width: 1.625rem;
 }
-footer a:hover {
-    text-decoration-line: underline;
+.blocCoeurs:hover  :nth-child(2) {
+    opacity: 1;
+    filter:brightness(1.2);
+    transition: 1s ease-in;
+    }
+.rideauCoeur {
+    z-index : 1; 
+    /* color: orchid;  */
+    /* background-color:  #f6f6f6; */
+    position: absolute;
+    position: center;
+    height: 35px; 
+    width:100%;
+    opacity:0; 
+} 
+.blocCoeurs:hover .rideauCoeur 
+{
+    /* z-index : 1; */
+    /* color: orchid; */
+    background-color: white;
+    /* position: absolute; */
+    /* position: center; */
+    /* height: 60px; */
+    /* width:100%; */
+    /* opacity:1; */
+    animation: rideauCoeur 1s linear ; 
+    animation-fill-mode: backwards ;
+    overflow: hidden;        
 }
-.logofooter {
-    font-family:shrikhand;
-    font-size: 20px;
-    letter-spacing: 1.4px;
-    padding-bottom: 18px;
-}
-.fa-utensils, .fa-hands-helping {
-    margin-right: 15px;
-}
-.finitionsFooter {
-    line-height: 25px;
+@keyframes rideauCoeur {
+    0%{ 
+    transform: translateY(0%) ; 
+    transform-origin: bottom;
+    opacity: 1;
+    }
+    100%{
+    transform: translateY(-100%); transform-origin: bottom;
+    opacity: 1;
+    }
 }
 /* Responsive */
 @media screen and (min-width: 50px) and (max-width: 768px) {

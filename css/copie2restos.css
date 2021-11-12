@@ -26,11 +26,12 @@ main {
 }
 .backGris {
     background: #f6f6f6;
-    margin: 0;
+    /* margin: 0; */
     padding-top: 1.3rem;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     overflow: hidden;
+    margin: auto;
 }
 h1 {
     padding-left: 1.2rem;
@@ -214,7 +215,7 @@ nav div i {
                 }
 .sectionEntrees, .sectionPlats, .sectionDesserts {
     overflow: hidden;
-    padding: 0 3.5% 0 3.5%;
+    padding: 0 1.5% 0 1.5%;
 } 
 /* Entrées Plats Desserts */
 /* .boxChoixMenu {  
@@ -507,21 +508,21 @@ footer div i {
 }
 /*----------- Responsive-------------- */
 
-@media screen and (min-width: 769px){
-    footer {
-        text-align: center;
-    }
-}
 
 
-@media screen and (min-width: 1000px) and (max-width:4000px)  {
+
+@media screen and (min-width: 1000px)  {
     .sectionsEntreesPlatsDesserts {
         display: flex;
         flex-direction: row;
-        /* justify-content: center;             */
+        justify-content: space-between;
+        padding: 4vh 1% 0vh 1%; 
+        background-color: yellow; 
+
     } 
     .sectionEntrees, .sectionPlats, .sectionDesserts {
-        padding: 0 1.5% 0 1.5%;           
+        padding: 0 1% 0 1.5%; 
+        width: 100%;          
     } 
     #boxImg {
         height: 30vh ;
@@ -529,6 +530,8 @@ footer div i {
 
     .backGris {
         border-radius: 60px 60px 0px 0px;
+        max-width: 1200px;
+       
     }
     
 }

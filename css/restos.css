@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('footer.css');
 
 *,
 ::before,
@@ -20,7 +21,7 @@ main {
     /* margin:0 0.3rem 0 0.3rem;    */
 }
 #blocPage {
-    max-width: 1400px;
+    max-width: 1600px;
     min-width: 350px;
     margin: 0 auto;
 }
@@ -32,6 +33,7 @@ main {
     border-top-right-radius: 40px;
     overflow: hidden;
 }
+
 h1 {
     padding-left: 1.2rem;
     font-style: oblique 5deg;
@@ -75,10 +77,9 @@ h3 {
     /* display:flex;
     justify-content: center; */
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.356);
-    padding-top: 12px;
-    padding-bottom: 4px; 
-    width: 100%;
-    /* margin-left: 13vh ; */
+    padding-right: 1%; 
+    padding-bottom: 0.05%; 
+    margin: 0 auto;
       
 }
 
@@ -103,10 +104,9 @@ nav div i {
     font-size: 1.5rem;
 }
 
-
-/* Main */
-#boxImg {
-    height: 16.6rem ;
+/*----------Main--------- */
+#boxImg {  
+    height: 16.6rem;
     width: 100%;
     background-image: url("../img/resto1.jpg");
     background-position:center;
@@ -120,14 +120,19 @@ nav div i {
     width: 100%;
     height: auto;
     position:relative;
-    overflow: hidden;  
+    overflow: hidden; 
+    
+    
 } 
 .nomResto_et_Coeur {
     display: flex;
     justify-content: space-between;
     padding-right: 8%;
+    /* text-align: center;  */
+    
     /* flex-direction: row; */
 }
+
 
 .blocCoeurs {
         /* z-index:3; */
@@ -150,7 +155,7 @@ nav div i {
 .blocCoeurs :nth-child(1) {
     z-index: 2;
     position: absolute;
-    position:center; 
+    
     opacity: 1;
     height: 1.688rem;
     width: 1.938rem;
@@ -182,7 +187,6 @@ nav div i {
         /* color: orchid;  */
         /* background-color:  #f6f6f6; */
         position: absolute;
-        position: center;
         height: 35px; 
         width:100%;
         opacity:0; 
@@ -231,7 +235,7 @@ nav div i {
     cursor:pointer;
     display:flex;
     flex-direction:row;
-    margin: 0 0 18px 0;
+    margin: 0 0 1.398vh 0;
     height: 4.2rem;
     width: 100%;
     border-radius: 15px;
@@ -419,7 +423,7 @@ nav div i {
     padding-bottom:1.03rem;
     margin-top: 30px;
     margin-bottom: 50px;
-    width: 50%;
+    width: 30%;
     height: 3.2rem;
     border-radius: 40px;
     font-size: 1rem;
@@ -465,70 +469,123 @@ nav div i {
         padding-right:0px;    }
     100% { padding-right:65px;}
 }
-
-
-   
-    
-    
-    
-    
-       
-
-
-
-/* section footer */
-footer {
-    font-family: roboto;
-    padding: 20px;
-    padding-bottom: 1.5rem;
-    padding-left: 35px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: rgba(255, 255, 255, 0.986);
-}
-footer a {
-    text-decoration: none;
-    color: white;
-}
-footer a:hover {
-    text-decoration-line: underline;
-}
-.logofooter {
-    font-family:shrikhand;
-    font-size: 20px;
-    letter-spacing: 1.4px;
-    padding-bottom: 18px;
-}
-footer div i {
-    margin-right: 15px;
-}
-.finitionsFooter {
-    line-height: 25px;
-}
 /*----------- Responsive-------------- */
 
-@media screen and (min-width: 769px){
-    footer {
-        text-align: center;
+
+@media screen and (min-width:767px) {   
+
+    html {
+        font-size: 110%;
+    }
+    .logo {
+        font-size: 2rem;
+    } 
+    
+    .nomResto_et_Coeur h1 {        
+        margin:0 ;
+        padding-top: 1vh;
+        padding-left: 3%;
+        /* padding-right: 30rem; */
+        font-size: 1.5rem;
+     }
+   
+
+    .btnCommander {
+        width: 45% ;
+        /* height: 6vh ; */
+        padding-top: 0.7rem ;
+        font-size: 120%;
     }
 }
 
+@media screen and (min-width:425px) and (max-width:1023px) {
+    h3 {
+        padding: 0% 0% 0% 1%
+    } 
+    .btnCommander {
+     width: 30%;
+}
 
-@media screen and (min-width: 1000px) and (max-width:4000px)  {
+
+@media screen and (min-width:1023px)  {
+    #conteneurCarte {  
+        margin-top:-50px;
+    }
+    .backGris {
+        border-radius: 60px 60px 0px 0px;
+        max-width: 1200px;
+        margin: 0 auto;
+    } 
+    .nomPreparation {
+        font-size: 99.5%;
+    }
     .sectionsEntreesPlatsDesserts {
         display: flex;
         flex-direction: row;
-        /* justify-content: center;             */
+        width: 100% ;
+        /* /* justify-content: center; */
+        padding: 4vh 1% 0vh 1%;           
     } 
+    .soulignement {
+        margin-bottom: 3vh;
+    }
     .sectionEntrees, .sectionPlats, .sectionDesserts {
-        padding: 0 1.5% 0 1.5%;           
+        padding: 0 1% 0 1%;
+        width: 100% ;
     } 
+     h1 {
+        margin-left: 0.9rem;
+    }
+    
+    p .btnCommander  {
+        width: 15%;
+        font-size: 93%;       
+    }
+}
+
+
+  
+
+@media screen and (min-width:1051px)    {
+    html {
+        font-size: 100%;
+    }
+    .sectionsEntreesPlatsDesserts {
+        display: flex;
+        flex-direction: row;        
+        width: 100% ;
+        height: 2000px;
+        padding: 2vh 1% 0vh 1%; 
+        background-color: yellow;          
+    } 
+    .soulignement {
+        margin-bottom: 3vh;
+    }
+    .sectionEntrees, .sectionPlats, .sectionDesserts {
+        padding: 0 1% 0 1%;
+        width: 100% ;
+    } 
+    /* h1 {
+        margin: 30vh 0 2vh ;
+    } */
     #boxImg {
         height: 30vh ;
     }
-
-    .backGris {
-        border-radius: 60px 60px 0px 0px;
-    }
-    
+    .btnCommander {
+        width: 15%;
+        font-size: 105%;
+   
 }
+
+/* @media screen and (min-width: 1200px)    {
+    .boxFooter{
+        max-width: 1245px;
+        margin: auto;
+       
+    } */
+
+
+    
+
+       
+

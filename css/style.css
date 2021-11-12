@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
+@import url('footer.css');
+@import url(loader.css);
 /* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
     display: none;
@@ -10,178 +11,7 @@
 ::before,
 ::after {
     box-sizing: border-box;
-}
-
-/* -----------------------------------------------------------------
-ecranBlanc = div de premier plan opaque blanche qui apparaît au chargement puis 
-qui s'estompe en transparence et disparaît
-Cette Div contient les demiCercles
---------------------------------------------------------------------- */
-
-    .ecranBlanc {
-    z-index: -5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -9999;
-    background-color: rgba(255,255,255,0);
-    animation: fadeInAnimation ease-out 2s; 
-    animation-fill-mode: backwards; 
-    animation-iteration-count: 1;   
-    }
-    /* -------------------------------------------------------
-    demiCercle = Cercles partiels concentriques qui apparaissent au début du chargement 
-    et disparaissent 1/10 de seconde après la Div " ecranBlanc" (pour
-    un meilleur effet)
-    ------------------------------------------------------------------ */
-
-    .demiCercle1 {
-    z-index: -5; 
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 3px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    border-bottom-color:#9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spin 2.5s, reverse linear infinite;
-    animation-fill-mode: forwards;
-    } 
-
-
-    .demiCercle2 {
-    z-index: -5;
-    width: 60px;
-    height: 60px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 4px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-right-color: #FF79DA;
-    border-left-color:#FF79DA;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spinreverse 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle3 {
-    z-index: -5;
-    width: 80px; 
-    height: 80px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 6px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-bottom-color: #9356DC;
-    border-top-color:#9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spin 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle4 {
-    z-index: -5;
-    width: 100px; 
-    height: 100px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;  
-    border: 9px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-left-color: #FF79DA;
-    border-right-color:#FF79DA;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: spinreverse 2.5s, linear infinite;
-    animation-fill-mode: forwards;
-    }
-
-    .demiCercle5 {
-    z-index: -5;
-    width: 120px; 
-    height: 120px;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    border: 12px solid rgba(255,255,255,0);
-    border-radius: 50%;
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    position: absolute;
-    top: 50%;
-    left: 50%;  
-    animation: spin 2.5s, linear infinite;  
-    animation-fill-mode: forwards;  
-    }
-
-
-    /* --------------------------------------------------------
-                    PARAMETRAGE DES ANIMATIONS
-    ------------------------------------------------------------ */
-
-    @keyframes spin {
-        0% {
-        transform: translate(-50%,-50%) rotate(0deg) ;
-        opacity: 1;
-        z-index: 4;
-        }
-        99.999% {
-        transform: translate(-50%,-50%) rotate(810deg) ;
-        opacity: 1;
-        z-index: 4;
-        }
-        100% {
-            opacity: 0;
-        z-index: -5;
-        }
-    }
-
-    @keyframes spinreverse {
-        0% {
-        transform: translate(-50%,-50%) rotate(0deg) ;
-        opacity: 1;
-        z-index: 4;
-        }
-        99.999% {
-        transform: translate(-50%,-50%) rotate(-810deg) ;
-        opacity: 1;
-        z-index: 4;
-        }
-        100% {
-            opacity: 0;
-        z-index: -5;
-        }
-    }
-    @keyframes fadeInAnimation { 
-        0% { 
-        background-color: rgba(255,255,255,1); 
-        z-index: 3;
-        }
-        40% {
-        background-color: rgba(255,255,255,1);
-        z-index: 3;
-        }
-        99.999% {
-        background-color: rgba(255,255,255,0.8);
-        z-index: 3;
-        } 
-        100% { 
-        background-color: rgba(255,255,255,0);
-        z-index: -5;
-        }
-    }
-
-/* Fin loader */
-    
+}    
 body {
     padding: 0;
     margin: 0;
@@ -193,7 +23,7 @@ main {
     
 }
 #blocPage {
-    max-width: 1350px;
+    max-width: 1440px;
     min-width: 350px;
     margin: 0 auto;
 
@@ -252,9 +82,9 @@ header:hover {
 }
 .slogan2 {
     padding-top: 4%;
-    padding-bottom: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-bottom: 7%;
+    padding-left: 6%;
+    padding-right: 6%;
     text-align: center;
     font-size: 1.15rem;
     color:rgba(0, 0, 0, 0.562);
@@ -271,7 +101,7 @@ header:hover {
     font-family: roboto;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
-    transition: filter eas 0.8s;
+    transition: filter ease 0.8s;
     margin-bottom: 60px;
     box-shadow:0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
     color: white;
@@ -290,9 +120,10 @@ header:hover {
     text-align: center;
 }
 .btnExplorer {
+    white-space: nowrap;
     padding-top: 1.03rem;
     padding-bottom:1.03rem;
-    width: 61%;
+    width: 59%;
     height: auto;
     border-radius: 40px;
     font-size: 0.96rem;
@@ -301,9 +132,9 @@ header:hover {
     font-family: roboto;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
-    transition: filter eas 0.8s;
-    margin-bottom: 60px;
-    box-shadow:0px 0px 10px 0px  rgba(236, 234, 234, 0.356)  
+    transition: filter ease 0.8s;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 8px 2px rgb(183 182 182 / 44%)  
 }
 .btnExplorer:hover {
     transition-duration: 200ms;
@@ -317,7 +148,7 @@ header:hover {
     justify-content: center;
 }
 .margesTitresSecondaires {    
-    padding: 22px 0 15px 35px;
+    padding: 22px 0 0 35px;
 }
 /* Fonctionnement */
 
@@ -329,13 +160,13 @@ header:hover {
     border-radius: 20px;
     font-size: 0.98rem;
     font-family: roboto;
-    font-weight: regular;
+    font-weight: normal;
     border: 0;
     background:rgba(236, 234, 234, 0.356);
     text-align: center;
     box-shadow: 0 0 14px #BBB;
     color:black;
-    transition: duration 400ms;
+    transition: transform ease 400ms;
     position:relative;
 
 }
@@ -344,7 +175,7 @@ header:hover {
 
     /* display:flex; */
     padding:15px;
-    gap:30px;
+    gap: 25px;
     display: flex;
     flex-direction: column;
     padding-left: 25px;
@@ -406,6 +237,7 @@ span {
 }
 .blocCartesRestos1 {
     display: flex;
+    /* flex-direction: column; */
     gap: 0.5rem;
     height: auto;
     padding-left: 0;
@@ -419,7 +251,7 @@ a {
 }
 .blocCartesRestos2 {
     display: flex;
-    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
     gap: 0.5rem;
     height: auto;
     padding-left: 0;
@@ -450,10 +282,10 @@ a {
     width: 98%;
     border-radius:15px;
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
-    height: 270px;
-    margin: 0 1% 0 1%;
+    height: 260px;
+    margin: 0 1% 0.58rem 1%;
     background: white; 
-    transition: duration 400ms;   
+    transition: transform ease 400ms;   
 }
 .carteResto:hover {
     transform: scale(1.01);
@@ -464,7 +296,7 @@ a {
     background-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height: 72%;
+    height: 70%;
 }
 .imgResto1 {
     background-image: url("../img/resto1.jpg");   
@@ -478,72 +310,121 @@ a {
 .imgResto4 {
     background-image: url("../img/resto4.jpg");   
 }
+.boxRestoQuartier_et_blocCoeurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+.boxRestoQuartier {
+    display: flex;
+    flex-direction: column;
+}
 .nomResto {
     font-size: 18px;
     font-weight: bolder;
     padding: 15px 0 5px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .quartierResto {
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 15px;
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }
-/* coeur et animation */
-.carteResto .blocCoeur {
-    position: absolute;
-    bottom: 30px;
-    right: 15px;
-}
-.blocCoeur img {
-    width: 29px;  
-    height: 29px;  
-    position: absolute;  
-    right: 15px;  
-    bottom: 0;  
-}
-.blocCoeur img:last-child {
-    opacity: 0;
-    transition: 400ms ease-in-out;
-}
-.blocCoeur img:last-child:hover{
-    opacity: 1;
+.blocCoeurs {
+    /* z-index:3; */
+    /* background-color: #acacac; */
+    /* border:#99E2D0 1px solid; */
+    position: relative;
+    display:flex ;
+    justify-content:center; 
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;    
+    margin-left: 1.75rem;
+    margin-top: 0.813rem;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-/* section footer */
-footer {
-    font-family: roboto;
-    padding: 20px;
-    padding-bottom: 1.5rem;
-    padding-left: 35px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.747);
-    color: rgba(255, 255, 255, 0.986);
+/*----coeur vide--------*/
+
+.blocCoeurs :nth-child(1) {
+    z-index: 2;
+    position: absolute;
+    position:center; 
+    opacity: 1;
+    height: 1.688rem;
+    width: 1.938rem;
+    /* transition: 400ms ease-in-out; */
 }
-footer a {
-    text-decoration: none;
-    color: white;
+    /* .blocCoeurs :nth-child(3):hover .blocCoeurs :nth-child(1) { */
+.blocCoeurs:hover :nth-child(1) {
+    opacity: 0;
+    transition: 1s ease-out;
+    }
+/*----coeur plein----------*/
+
+.blocCoeurs :nth-child(2) { /*----coeur plein----------*/
+    opacity: 0;
+    height: 1.438rem;
+    width: 1.625rem;
 }
-footer a:hover {
-    text-decoration-line: underline;
+.blocCoeurs:hover  :nth-child(2) {
+    opacity: 1;
+    filter:brightness(1.2);
+    transition: 1s ease-in;
+    }
+.rideauCoeur {
+    z-index : 1; 
+    /* color: orchid;  */
+    /* background-color:  #f6f6f6; */
+    position: absolute;
+    position: center;
+    height: 35px; 
+    width:100%;
+    opacity:0; 
+} 
+.blocCoeurs:hover .rideauCoeur 
+{
+    /* z-index : 1; */
+    /* color: orchid; */
+    background-color: white;
+    /* position: absolute; */
+    /* position: center; */
+    /* height: 60px; */
+    /* width:100%; */
+    /* opacity:1; */
+    animation: rideauCoeur 1s linear ; 
+    animation-fill-mode: backwards ;
+    overflow: hidden;        
 }
-.logofooter {
-    font-family:shrikhand;
-    font-size: 20px;
-    letter-spacing: 1.4px;
-    padding-bottom: 18px;
+@keyframes rideauCoeur {
+    0%{ 
+    transform: translateY(0%) ; 
+    transform-origin: bottom;
+    opacity: 1;
+    }
+    100%{
+    transform: translateY(-100%); transform-origin: bottom;
+    opacity: 1;
+    }
 }
-.fa-utensils, .fa-hands-helping {
-    margin-right: 15px;
-}
-.finitionsFooter {
-    line-height: 25px;
-}
+
 /* Responsive */
-@media screen and (min-width: 50px) and (max-width: 768px) {
+@media screen and (min-width: 760px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
         flex-direction: column;
         margin-bottom: 0.75rem;
-    }
+        /* margin-bottom: 2rem; */
+}
     .blocCartesRestos2 {
         display: flex;
         flex-direction: column;
@@ -583,10 +464,11 @@ footer a:hover {
     }
     #blocRestos {
        margin-top: 0px;
+      
     }
-    footer {
+    /* footer {
         text-align: center;
-    }
+    } */
 }
 @media screen and (min-width: 900px) {
     header {       
@@ -618,19 +500,19 @@ footer a:hover {
         flex-direction: row;        
     }
     #placementBtn div {
-        margin-right: 2.7rem;
+        /* margin-right: 2.7rem; */
         padding-right: 1.5rem;
         margin-left: 0.8rem;
         font-size: 1rem;
 
     }
     #placementBtn button i {
-        margin-right: 0.1 rem;
+        margin-right: 0.1rem;
         padding: 0.5rem;
     }
-    footer {
+    /* footer {
         text-align: center;
-    }
+    } */
 }
 @media screen and (min-width: 1300px) {
     h1 {
@@ -653,8 +535,7 @@ footer a:hover {
         width: 40%;
         height: 4rem;
         border-radius: 40px;
-        font-size: 1.3rem;
-         
+        font-size: 1.3rem;         
     }
     #placementBtn div{
         display: flex;
@@ -671,9 +552,7 @@ footer a:hover {
         margin-left: 1rem;
         padding: 0.5rem;
     }
-    footer {
-        text-align: center;
-    }
+   
 }
     
 

@@ -1,0 +1,169 @@
+/* -----------------------------------------------------------------
+ecranBlanc = div de premier plan opaque blanche qui apparaît au chargement puis 
+qui s'estompe en transparence et disparaît
+Cette Div contient les demiCercles
+--------------------------------------------------------------------- */
+
+.ecranBlanc {
+    z-index: -5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+    background-color: rgba(255,255,255,0);
+    animation: fadeInAnimation ease-out 2s; 
+    animation-fill-mode: backwards; 
+    animation-iteration-count: 1;   
+    }
+    /* -------------------------------------------------------
+    demiCercle = Cercles partiels concentriques qui apparaissent au début du chargement 
+    et disparaissent 1/10 de seconde après la Div " ecranBlanc" (pour
+    un meilleur effet)
+    ------------------------------------------------------------------ */
+
+    .demiCercle1 {
+    z-index: -5; 
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 3px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-top-color: #9356DC;
+    border-bottom-color:#9356DC;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 2.5s, reverse linear infinite;
+    animation-fill-mode: forwards;
+    } 
+
+
+    .demiCercle2 {
+    z-index: -5;
+    width: 60px;
+    height: 60px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 4px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-right-color: #FF79DA;
+    border-left-color:#FF79DA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinreverse 2.5s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+
+    .demiCercle3 {
+    z-index: -5;
+    width: 80px; 
+    height: 80px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 6px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-bottom-color: #9356DC;
+    border-top-color:#9356DC;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 2.5s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+
+    .demiCercle4 {
+    z-index: -5;
+    width: 100px; 
+    height: 100px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;  
+    border: 9px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-left-color: #FF79DA;
+    border-right-color:#FF79DA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinreverse 2.5s, linear infinite;
+    animation-fill-mode: forwards;
+    }
+
+    .demiCercle5 {
+    z-index: -5;
+    width: 120px; 
+    height: 120px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 12px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    animation: spin 2.5s, linear infinite;  
+    animation-fill-mode: forwards;  
+    }
+
+
+    /* --------------------------------------------------------
+                    PARAMETRAGE DES ANIMATIONS
+    ------------------------------------------------------------ */
+
+    @keyframes spin {
+        0% {
+        transform: translate(-50%,-50%) rotate(0deg) ;
+        opacity: 1;
+        z-index: 4;
+        }
+        99.999% {
+        transform: translate(-50%,-50%) rotate(810deg) ;
+        opacity: 1;
+        z-index: 4;
+        }
+        100% {
+            opacity: 0;
+        z-index: -5;
+        }
+    }
+
+    @keyframes spinreverse {
+        0% {
+        transform: translate(-50%,-50%) rotate(0deg) ;
+        opacity: 1;
+        z-index: 4;
+        }
+        99.999% {
+        transform: translate(-50%,-50%) rotate(-810deg) ;
+        opacity: 1;
+        z-index: 4;
+        }
+        100% {
+            opacity: 0;
+        z-index: -5;
+        }
+    }
+    @keyframes fadeInAnimation { 
+        0% { 
+        background-color: rgba(255,255,255,1); 
+        z-index: 3;
+        }
+        40% {
+        background-color: rgba(255,255,255,1);
+        z-index: 3;
+        }
+        99.999% {
+        background-color: rgba(255,255,255,0.8);
+        z-index: 3;
+        } 
+        100% { 
+        background-color: rgba(255,255,255,0);
+        z-index: -5;
+        }
+    }
+
+/* Fin loader */
