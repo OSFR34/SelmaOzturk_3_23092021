@@ -508,6 +508,12 @@ footer div i {
 }
 /*----------- Responsive-------------- */
 
+@media screen and (min-width:425px) and (max-width:1023px) {
+    h3 {
+        padding: 0% 0% 0% 1%
+    } 
+}
+
 @media screen and (min-width: 766px) {
     .btnCommander {
         width: 25%;
@@ -516,6 +522,9 @@ footer div i {
 
 
 @media screen and (min-width: 1000px)  {
+    h1 {
+        padding-left: 2.5rem;
+    }
     .sectionsEntreesPlatsDesserts {
         display: flex;
         flex-direction: row;
