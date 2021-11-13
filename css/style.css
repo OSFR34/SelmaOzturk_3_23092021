@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import url('footer.css');
-@import url(loader.css);
+@import url('loader.css');
 /* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
     display: none;
@@ -26,7 +25,6 @@ main {
     max-width: 1440px;
     min-width: 350px;
     margin: 0 auto;
-
 }
 .backGris {
     background:rgba(196, 193, 193, 0.212);
@@ -416,8 +414,40 @@ a {
     opacity: 1;
     }
 }
+/* -------------------section footer -----------------------*/
 
-/* Responsive */
+.backGrisFonce {
+    max-width: 1440;
+    background-color: rgba(0, 0, 0, 0.747);
+}   
+.boxFooter {
+    font-family: roboto;
+    padding-bottom: 1.5rem;     
+    color: rgba(255, 255, 255, 0.986);
+    max-width: 1200px;
+    margin: auto;  
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration-line: underline;
+}
+.logofooter {
+    font-family:shrikhand;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding-bottom: 18px;
+}
+.fa-utensils, .fa-hands-helping {
+    margin-right: 15px;
+}
+.finitionsFooter {
+    line-height: 25px;
+}
+
+/*----------- Responsive -------------*/
 @media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
@@ -451,8 +481,8 @@ a {
     }    
     .btnExplorer {
         padding-top: 1.3rem;
-        padding-bottom:1.3rem;
-        width: 40%;
+        padding-bottom:1.rem;
+        width: 30%;
         height: auto;
         border-radius: 40px;
         font-size: 1.1rem;  
@@ -463,27 +493,30 @@ a {
 }
 @media screen and (min-width: 900px) {
     header {       
-        font-size: 2.7rem;
+        font-size: 2.1rem;
     }
     .margesRechercher {
         font-size: 1.3rem;
     }
-    .slogan {
-        font-size:xx-large; 
+    .slogan1 {
+        font-size:x-large; 
+        padding-top: 3%;
     }
     .slogan2 {
         font-size:x-large;
+        padding-bottom: 3%;
+        padding-top: 3%;
     }
     .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
-        width: 40%;
+        width: 22%;
         height: 4rem;
         border-radius: 40px;
-        font-size: 1.3rem;         
+        font-size: 1.1rem;         
     }
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding-left: 2rem;
     }
     #placementBtn {
@@ -502,9 +535,12 @@ a {
     }  
 }
 @media screen and (min-width: 1300px) {
-    h1 {
+    /* h1 {
         font-size: 1.8rem;
         padding-left: 2rem;
+    }
+    .slogan1 {
+        padding-top: 10%;
     }
     .margesRechercher {
         font-size: 1.3rem;
@@ -514,15 +550,15 @@ a {
     }
     .slogan2 {
         font-size:x-large;
-    }
-    .btnExplorer {
+    } */
+    /* .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
         width: 40%;
         height: 3.5rem;
         border-radius: 40px;
         font-size: 1.3rem;         
-    }
+    } */
     #placementBtn div{
         display: flex;
         flex-direction: row;

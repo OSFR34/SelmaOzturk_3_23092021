@@ -477,7 +477,7 @@ nav div i {
 
 
 
-/* section footer */
+/* section footer
 footer {
     font-family: roboto;
     padding: 20px;
@@ -505,7 +505,7 @@ footer div i {
 }
 .finitionsFooter {
     line-height: 25px;
-}
+} */
 /*----------- Responsive-------------- */
 
 @media screen and (min-width:425px) and (max-width:1023px) {
