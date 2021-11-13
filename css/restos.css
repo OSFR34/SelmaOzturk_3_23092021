@@ -428,8 +428,8 @@ footer a:hover {
     }
 }
 @media screen and (min-width: 990px)  {
-    #boxImg2, #boxImg3, #boxImg4  {
-        height: 30rem;
+    #boxImg1,#boxImg2, #boxImg3, #boxImg4  {
+        height: 27rem;
     }
     h1 {
         padding-left: 2.5rem;
