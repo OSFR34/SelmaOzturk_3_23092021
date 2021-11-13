@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import url('footer.css');
 
+/*----------------- GENERAL----------------------- */
 *,
 ::before,
 ::after {
@@ -11,55 +11,43 @@ body {
     margin: 0px;
     font-family: roboto, sans-serif;
 }
-/* header */
 .fa-arrow-left {
     font-size: 1.2rem;   
     padding-left: 0.6rem;
 }
 main {
     padding: 0;
-    /* margin:0 0.3rem 0 0.3rem;    */
 }
 #blocPage {
-    max-width: 1600px;
+    max-width: 1400px;
     min-width: 350px;
     margin: 0 auto;
 }
 .backGris {
     background: #f6f6f6;
-    margin: 0;
     padding-top: 1.3rem;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     overflow: hidden;
+    margin: auto; 
 }
-
 h1 {
     padding-left: 1.2rem;
     font-style: oblique 5deg;
     font-family: Shrikhand;
     font-weight: 300;
     font-size: 1.73rem;
-    /* letter-spacing: 1.005px; */
-    /* display: flex; */
-    /* justify-content: start; */
-    /* padding-left: 8px; */
     margin-top: 1.2rem;
     line-height: 1;
     white-space: nowrap;
 }
 h3 {
     text-transform: uppercase;
-    /* padding-left: 8px;
-    padding-top: 5px; */
     padding: 0 0 1% 1.7%;
     color: rgba(97, 96, 96, 0.877);
     font-weight: normal;
     font-size: 1.05rem;
     margin-bottom: 0.7%;
-    
-
-    /* padding-bottom: 0; */
 }
 .soulignement {
     border-bottom: 0.2rem solid #99E2D0;
@@ -67,22 +55,17 @@ h3 {
     margin-left: 0.35rem;
     margin-bottom: 1rem;
 }
-/* Fin general */
-
+/*------------HEADER------------*/
 .logo {
     font-family: 'Shrikhand', cursive;
     font-size: 1.9rem;
     letter-spacing: 0.02px;
     text-align: center;
-    /* display:flex;
-    justify-content: center; */
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.356);
-    padding-right: 1%; 
-    padding-bottom: 0.05%; 
-    margin: 0 auto;
-      
+    padding-top: 12px;
+    padding-bottom: 4px; 
+    width: 100%;
 }
-
 .logo::after {
     display:flex;
     justify-content: center;
@@ -99,45 +82,57 @@ h3 {
     display:inline-block;
     color:#000000;
 }
-
 nav div i {
     font-size: 1.5rem;
 }
-
-/*----------Main--------- */
-#boxImg {  
-    height: 16.6rem;
+/*----------------------------------------
+             MAIN
+-----------------------------------------*/
+#boxImg1 {
+    height: 16.6rem ;
     width: 100%;
     background-image: url("../img/resto1.jpg");
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
 }
+#boxImg2 {
+    height: 16.6rem ;
+    width: 100%;
+    background-image: url("../img/resto2.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#boxImg3 {
+    height: 16.6rem ;
+    width: 100%;
+    background-image: url("../img/resto3.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#boxImg4 {
+    height: 16.6rem ;
+    width: 100%;
+    background-image: url("../img/resto4.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
 #conteneurCarte {  
     margin-top:-50px;
-    /* padding-left: 5px;
-    padding-right: 5px;  */
     width: 100%;
     height: auto;
     position:relative;
-    overflow: hidden; 
-    
-    
+    overflow: hidden;    
 } 
 .nomResto_et_Coeur {
     display: flex;
     justify-content: space-between;
-    padding-right: 8%;
-    /* text-align: center;  */
-    
-    /* flex-direction: row; */
+    padding-right: 4%;
 }
-
-
 .blocCoeurs {
-        /* z-index:3; */
-        /* background-color: #acacac; */
-        /* border:#99E2D0 1px solid; */
     position: relative;
     display:flex ;
     justify-content:center; 
@@ -149,141 +144,92 @@ nav div i {
     margin-top: 0.813rem;
     cursor: pointer;
 }
-
-/*----coeur vide--------*/
-
+/*----COEUR VIDE--------*/
 .blocCoeurs :nth-child(1) {
     z-index: 2;
     position: absolute;
-    
+    position:center; 
     opacity: 1;
     height: 1.688rem;
     width: 1.938rem;
-    /* transition: 400ms ease-in-out; */
 }
-        /* .blocCoeurs :nth-child(3):hover .blocCoeurs :nth-child(1) { */
-            .blocCoeurs:hover :nth-child(1) {
-            opacity: 0;
-            transition: 1s ease-out;
-        }
-
-/*----coeur plein----------*/
-
-    .blocCoeurs :nth-child(2) { /*----coeur plein----------*/
-        opacity: 0;
-        height: 1.438rem;
-        width: 1.625rem;
+.blocCoeurs:hover :nth-child(1) {
+    opacity: 0;
+    transition: 1s ease-out;
+}
+/*----COEUR PLEIN----------*/
+.blocCoeurs :nth-child(2) { 
+    opacity: 0;
+    height: 1.438rem;
+    width: 1.625rem;
+}
+.blocCoeurs:hover  :nth-child(2){
+    opacity: 1;
+    filter:brightness(1.2);
+    transition: 1s ease-in;
+}
+.rideauCoeur {
+    z-index : 1; 
+    position: absolute;
+    position: center;
+    height: 35px; 
+    width:100%;
+    opacity:0; 
+} 
+.blocCoeurs:hover .rideauCoeur {
+    background-color: #f6f6f6;
+    animation: rideauCoeur 1s linear ; 
+    animation-fill-mode: backwards ;
+    overflow: hidden;        
+}
+@keyframes rideauCoeur {
+    0%{ 
+    transform: translateY(0%) ; 
+    transform-origin: bottom;
+    opacity: 1;
     }
-        .blocCoeurs:hover  :nth-child(2){
-            opacity: 1;
-            filter:brightness(1.2);
-            transition: 1s ease-in;
-        }
-
-
-.rideauCoeur
-    {
-        z-index : 1; 
-        /* color: orchid;  */
-        /* background-color:  #f6f6f6; */
-        position: absolute;
-        height: 35px; 
-        width:100%;
-        opacity:0; 
-    } 
-        .blocCoeurs:hover .rideauCoeur 
-        {
-            /* z-index : 1; */
-            /* color: orchid; */
-            background-color: #f6f6f6;
-            /* position: absolute; */
-            /* position: center; */
-            /* height: 60px; */
-            /* width:100%; */
-            /* opacity:1; */
-            animation: rideauCoeur 1s linear ; 
-            animation-fill-mode: backwards ;
-            overflow: hidden;        
-        }
-                @keyframes rideauCoeur
-                {
-                    0%{ 
-                    transform: translateY(0%) ; 
-                    transform-origin: bottom;
-                    opacity: 1;
-                    }
-                    100%{
-                        transform: translateY(-100%); transform-origin: bottom;
-                        opacity: 1;}
-                }
+    100%{
+        transform: translateY(-100%); transform-origin: bottom;
+        opacity: 1;}
+}
 .sectionEntrees, .sectionPlats, .sectionDesserts {
     overflow: hidden;
-    padding: 0 3.5% 0 3.5%;
-} 
-/* Entrées Plats Desserts */
-/* .boxChoixMenu {  
-   
-    justify-content: center;  
-    
-    
-} */
-
+    padding: 0 1.5% 0 1.5%;
+}
 .boxChoixMenu1, .boxChoixMenu2, .boxChoixMenu3 {
     opacity:0;
-    /* top: 100px; */
-    /* left:50px; */
     cursor:pointer;
     display:flex;
     flex-direction:row;
-    margin: 0 0 1.398vh 0;
+    margin: 0 0 18px 0;
     height: 4.2rem;
     width: 100%;
     border-radius: 15px;
-    /* box-shadow: 0px 0px 11px 2px rgb(0 0 0 / 18%); */
-
     overflow: hidden;
     background-color: white;
 }
-
-
-/* .boxChoixMenu:hover{
-    background-color: rgba(235, 183, 183, 0.822);
-    border: 3px solid red;
-} */
-
-
-.boxChoixMenu1{
-    /* opacity: 0; */
+.boxChoixMenu1 {
     animation: apparition_boxChoixMenu .6s ;
     animation-fill-mode:forwards;
     animation-delay: 0s;
 }
-.boxChoixMenu2{
-    /* /* opacity: 0; * */
+.boxChoixMenu2 {
     animation: apparition_boxChoixMenu .75s linear 1;
     animation-fill-mode:forwards;
     animation-delay: 0.04s;
 }
-.boxChoixMenu3{
-    /*opacity: 0; * */
+.boxChoixMenu3 {
     animation: apparition_boxChoixMenu 1s linear ;
     animation-fill-mode:forwards;
     animation-delay: 0.08s;
 }
-
-@keyframes apparition_boxChoixMenu{
+@keyframes apparition_boxChoixMenu {
     0%{ 
-    /* position:absolute;  */
-    transform: translateY(100%) ; 
-    transform-origin: top;
-    opacity: 0;
-    filter: brightness(0.95);
+        transform: translateY(100%) ; 
+        transform-origin: top;
+        opacity: 0;
+        filter: brightness(0.95);
     }
-    /* 50%{
-        /* position:absolute;  *
-        transform: translateY(50%);
-        opacity: 0.4;
-    } */
     95%{
         transform: translateY(0%); transform-origin: top;
         opacity:60%;
@@ -297,35 +243,29 @@ nav div i {
         filter: brightness(1);
     }
 }
-
-.boxTextes {
-    
+.boxTextes {    
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* width:calc(100%-85px); */
-    width: 100%;
-    
-}
-    
+    width: 100%;    
+}    
 .nomPreparation {
-      margin-left: 15px;
-      margin-top: 7px;
-      height: 33px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-weight: bolder ;
-      font-family: sans-serif;
-      font-size: 1.14rem;
-      letter-spacing: -0.6px;
-      color: rgba(0, 0, 0, 0.658);
-      padding-top: 0.3rem;
-      line-height: 1.6;
+    margin-left: 15px;
+    margin-top: 7px;
+    height: 33px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder ;
+    font-family: sans-serif;
+    font-size: 1.14rem;
+    letter-spacing: -0.6px;
+    color: rgba(0, 0, 0, 0.658);
+    padding-top: 0.3rem;
+    line-height: 1.6;
 }
-
 .boxChoixMenu:hover .nomPreparation {
     animation : diminutionTextes 0.8s linear 1; animation-fill-mode:forwards;       
 }
@@ -338,20 +278,17 @@ nav div i {
     margin-left:15px ;       
 }
 .boxChoixMenu1:hover .detailsMenu, .boxChoixMenu2:hover .detailsMenu, .boxChoixMenu3:hover .detailsMenu{
-    /* .boxChoixMenu:hover .detailsMenu{ */
-        animation : diminutionTextes 0.8s linear 1;
-        animation-fill-mode:forwards;
+    animation : diminutionTextes 0.8s linear 1;
+    animation-fill-mode:forwards;
     }
 .boxPrixCheck {
     width: 55px;
-    height:100%;
-    
+    height:100%;    
     display:flex;
     flex-direction:row;
     align-items: center;
 }
 .boxChoixMenu1:hover .boxPrixCheck, .boxChoixMenu2:hover .boxPrixCheck, .boxChoixMenu3:hover .boxPrixCheck{
-/* .boxChoixMenu:hover .boxPrixCheck { */
     display:flex ;
     justify-content:center; 
     align-items: center;
@@ -365,11 +302,9 @@ nav div i {
     width: 55px;
     font-weight: 600;
     padding-top: 2.3rem;
-    font-size: 0.93rem;
-   
+    font-size: 0.93rem;   
     display: flex;
-    justify-content: center;
-   
+    justify-content: center;   
 }
 .boxCheck {
     position: absolute;
@@ -378,9 +313,6 @@ nav div i {
     align-items: center;
     background-color: #99E2D0;
     height: 100%;
-    /* margin-left: 70px; */
-    /* top: 0;
-    bottom: 0; */
     right: -65px;
     width: 65px;
 }
@@ -393,50 +325,37 @@ nav div i {
     border-radius: 50%;
 }
 .boxChoixMenu1:hover .fa-check, .boxChoixMenu2:hover .fa-check, .boxChoixMenu3:hover .fa-check{
-    /* position:absolute ; */
     color:#99E2D0;
     font-size: 14px;
     font-weight: bold;
     border: 4px solid white;
     background-color: white;
-    /* border-radius: 50%; */
-    animation: rotation 0.8s linear 1 ;
-    /* overflow: hidden; */
+    animation: rotation 0.8s linear 1;
 }
 .boxCheck:hover .fa-check{
     animation: clignoter 0.6s linear 3;
-    /* animation-duration: .8s;
-    animation-name: clignoter;
-    animation-iteration-count: infinite; */
-    /* transition: none; */
 }
-
-
-
 .positionBtnCommander {
     display: flex;
     justify-content: center;
-
-    }
+}
 .btnCommander {
     padding-top: 1.03rem;
     padding-bottom:1.03rem;
     margin-top: 30px;
     margin-bottom: 50px;
-    width: 30%;
+    width: 50%;
     height: 3.2rem;
     border-radius: 40px;
     font-size: 1rem;
     letter-spacing: 0.5px;
     background: linear-gradient(#ff79d9d8, #9256dce1);
     font-weight: normal;
-    transition: 0.4s;
-    
+    transition: 0.4s;    
     box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
     color: white;
     display: flex;
-    justify-content: center;
-        
+    justify-content: center;        
 }
 .btnCommander:hover {
     transition-duration: 200ms;
@@ -444,21 +363,14 @@ nav div i {
     filter:brightness(1.1);
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     cursor:pointer;
-}
- 
-/* 
------------------------ANIMATIONS---------------------------------------------
- */
-
-
+} 
+/*---------------------ANIMATIONS CHECK------------------------- */
 @keyframes rotation {
     100%{ transform:rotate(360deg) ; }
 }
 @keyframes translationBoxPrixCheck {
-    /* 0%{ transform: translateX(0px); } */
     100%{ transform: translateX(-65px); transform-origin: right; }
 }
-
 @keyframes clignoter {
     0%   { opacity:1; }
     50%   {opacity:0; }
@@ -469,123 +381,87 @@ nav div i {
         padding-right:0px;    }
     100% { padding-right:65px;}
 }
-/*----------- Responsive-------------- */
-
-
-@media screen and (min-width:767px) {   
-
-    html {
-        font-size: 110%;
-    }
-    .logo {
-        font-size: 2rem;
-    } 
-    
-    .nomResto_et_Coeur h1 {        
-        margin:0 ;
-        padding-top: 1vh;
-        padding-left: 3%;
-        /* padding-right: 30rem; */
-        font-size: 1.5rem;
-     }
-   
-
-    .btnCommander {
-        width: 45% ;
-        /* height: 6vh ; */
-        padding-top: 0.7rem ;
-        font-size: 120%;
-    }
+/* ------------------FOOTER----------------- */
+footer {
+    max-width: 1440;
+    background-color: rgba(0, 0, 0, 0.747);
+}   
+.boxFooter {
+    font-family: roboto;
+    padding: 1.5rem 0 1.5rem 1.5rem;   
+    color: rgba(255, 255, 255, 0.986);
+    max-width: 1220px;
+    margin: auto;  
 }
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration-line: underline;
+}
+.logofooter {
+    font-family:shrikhand;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding-bottom: 18px;
+}
+.fa-utensils, .fa-hands-helping {
+    margin-right: 15px;
+}
+.finitionsFooter {
+    line-height: 25px;
+}
+/*----------- RESPONSIVE-------------- */
 
 @media screen and (min-width:425px) and (max-width:1023px) {
     h3 {
-        padding: 0% 0% 0% 1%
+        padding: 0% 0% 0% 1%;
     } 
-    .btnCommander {
-     width: 30%;
 }
-
-
-@media screen and (min-width:1023px)  {
-    #conteneurCarte {  
-        margin-top:-50px;
+@media screen and (min-width: 766px) {
+    .btnCommander {
+        width: 25%;
     }
-    .backGris {
-        border-radius: 60px 60px 0px 0px;
-        max-width: 1200px;
-        margin: 0 auto;
-    } 
-    .nomPreparation {
-        font-size: 99.5%;
+    #boxImg {
+        height: 22rem;
+    }
+}
+@media screen and (min-width: 990px)  {
+    h1 {
+        padding-left: 2.5rem;
     }
     .sectionsEntreesPlatsDesserts {
         display: flex;
         flex-direction: row;
-        width: 100% ;
-        /* /* justify-content: center; */
-        padding: 4vh 1% 0vh 1%;           
+        justify-content: space-between;
+        padding: 0.5vh 1% 0vh 1%; 
     } 
-    .soulignement {
-        margin-bottom: 3vh;
-    }
     .sectionEntrees, .sectionPlats, .sectionDesserts {
-        padding: 0 1% 0 1%;
-        width: 100% ;
+        padding: 0 1% 2.5% 1%; 
+        width: 100%;          
     } 
-     h1 {
-        margin-left: 0.9rem;
-    }
-    
-    p .btnCommander  {
-        width: 15%;
-        font-size: 93%;       
-    }
-}
-
-
-  
-
-@media screen and (min-width:1051px)    {
-    html {
-        font-size: 100%;
-    }
-    .sectionsEntreesPlatsDesserts {
-        display: flex;
-        flex-direction: row;        
-        width: 100% ;
-        height: 2000px;
-        padding: 2vh 1% 0vh 1%; 
-        background-color: yellow;          
-    } 
-    .soulignement {
-        margin-bottom: 3vh;
-    }
-    .sectionEntrees, .sectionPlats, .sectionDesserts {
-        padding: 0 1% 0 1%;
-        width: 100% ;
-    } 
-    /* h1 {
-        margin: 30vh 0 2vh ;
-    } */
     #boxImg {
-        height: 30vh ;
+        height: 40vh ;
+    }
+    .backGris {
+        border-radius: 60px 60px 0px 0px;
+        max-width: 1200px;       
+    }
+    .boxChoixMenu1, .boxChoixMenu2, .boxChoixMenu3 {
+        margin-top: 25px;
     }
     .btnCommander {
-        width: 15%;
-        font-size: 105%;
-   
+        margin: 0.8vh 0 5vh 0;
+    }    
 }
-
-/* @media screen and (min-width: 1200px)    {
-    .boxFooter{
-        max-width: 1245px;
-        margin: auto;
-       
-    } */
-
-
-    
-
-       
-
+@media screen and (min-width: 1024px) {
+    .btnCommander {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #boxImg {
+        height: 40vh ;
+    }
+}
