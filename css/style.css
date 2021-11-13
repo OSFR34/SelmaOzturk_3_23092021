@@ -79,10 +79,7 @@ header:hover {
     font-weight: bold;
 }
 .slogan2 {
-    padding-top: 4%;
-    padding-bottom: 7%;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 4% 6% 7% 6%;
     text-align: center;
     font-size: 1.15rem;
     color:rgba(0, 0, 0, 0.562);
@@ -382,24 +379,14 @@ a {
     }
 .rideauCoeur {
     z-index : 1; 
-    /* color: orchid;  */
-    /* background-color:  #f6f6f6; */
     position: absolute;
     position: center;
     height: 35px; 
     width:100%;
     opacity:0; 
 } 
-.blocCoeurs:hover .rideauCoeur 
-{
-    /* z-index : 1; */
-    /* color: orchid; */
+.blocCoeurs:hover .rideauCoeur {
     background-color: white;
-    /* position: absolute; */
-    /* position: center; */
-    /* height: 60px; */
-    /* width:100%; */
-    /* opacity:1; */
     animation: rideauCoeur 1s linear ; 
     animation-fill-mode: backwards ;
     overflow: hidden;        
@@ -425,7 +412,6 @@ a {
     font-family: roboto;
     padding: 1.5rem;     
     color: rgba(255, 255, 255, 0.986);
-    /* max-width: 1200px; */
     margin: auto;  
 }
 footer a {
@@ -449,6 +435,13 @@ footer a:hover {
 }
 
 /*----------- Responsive -------------*/
+@media screen and (min-width: 50px) and (max-width: 350px) {
+    .slogan2 {
+        padding: 4% 8px 7% 8px;
+        text-align: center;
+        font-size: 1.15rem;    
+    }
+}   
 @media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
@@ -463,34 +456,64 @@ footer a:hover {
    .carteResto {
        margin-bottom: 1.5rem;
    }
+   .slogan2 {
+    padding: 4% 6% 7% 6%;
 }
-@media screen and (min-width: 500px) and (max-width:768px) {
+@media screen and (min-width: 500px) and (max-width:767px) {
     #placementBtn div {
         font-size: 1rem;
     }
 }    
 @media screen and (min-width: 769px) and (max-width:899px) {
+    header {       
+        font-size: 2.1rem;
+    }
+    .margesRechercher {
+        font-size: 1.1rem;
+
+    }
+    .slogan1 {
+        font-size:x-large; 
+        padding-top: 2%;
+    }
+    .slogan2 {
+        font-size:large;
+        padding-bottom: 1.5%;
+        padding-top: 1.5%;
+    }
+    .btnExplorer {
+        padding-top: 0.8rem;
+        padding-bottom:1.3rem;
+        width: 30%;
+        height: 3rem;
+        border-radius: 40px;
+        /* font-size: 1.1rem;  */
+        margin-bottom: 25px;       
+    }
+    /* h1 {
+        font-size: 1.5rem;
+        padding-left: 2rem;
+    } */
+    .margesTitresSecondaires {
+        margin-top: 0.7vh;
+    }
     #placementBtn {
         display: flex;
-        flex-direction: row;
-        margin-bottom: 0rem;        
+        flex-direction: row;        
     }
-  
+    #placementBtn div {
+        padding-right: 1.5rem;
+        margin-left: 0.8rem;
+        font-size: 1rem;
+
+    }
     #placementBtn button i {
-        margin-right: 0;
-        padding: 0.7rem;
-    }    
-    .btnExplorer {
-        padding-top: 1.3rem;
-        padding-bottom:1.rem;
-        width: 30%;
-        height: auto;
-        border-radius: 40px;
-        font-size: 1.1rem;  
-    }
+        margin-right: 0.1rem;
+        padding: 0.5rem;
+    } 
     #blocRestos {
-       margin-top: 0px;      
-    }   
+        margin-top: 20px;
+    } 
 }
 @media screen and (min-width: 900px) {
     header {       

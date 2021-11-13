@@ -30,7 +30,7 @@ main {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     overflow: hidden;
-    margin: auto;
+    margin: auto; 
 }
 h1 {
     padding-left: 1.2rem;
@@ -102,7 +102,7 @@ nav div i {
     width: 100%;
     height: auto;
     position:relative;
-    overflow: hidden;  
+    overflow: hidden;    
 } 
 .nomResto_et_Coeur {
     display: flex;

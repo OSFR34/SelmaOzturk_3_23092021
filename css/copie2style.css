@@ -438,24 +438,14 @@ a {
     }
 .rideauCoeur {
     z-index : 1; 
-    /* color: orchid;  */
-    /* background-color:  #f6f6f6; */
     position: absolute;
     position: center;
     height: 35px; 
     width:100%;
     opacity:0; 
 } 
-.blocCoeurs:hover .rideauCoeur 
-{
-    /* z-index : 1; */
-    /* color: orchid; */
+.blocCoeurs:hover .rideauCoeur {
     background-color: white;
-    /* position: absolute; */
-    /* position: center; */
-    /* height: 60px; */
-    /* width:100%; */
-    /* opacity:1; */
     animation: rideauCoeur 1s linear ; 
     animation-fill-mode: backwards ;
     overflow: hidden;        
@@ -471,7 +461,7 @@ a {
     opacity: 1;
     }
 }
-/* Responsive */
+/*-------------RESPONSIVE------------------- */
 @media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
         display: flex;
