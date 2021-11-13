@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import url('footer.css');
+
 *,
 ::before,
 ::after {
@@ -126,7 +126,7 @@ nav div i {
 .nomResto_et_Coeur {
     display: flex;
     justify-content: space-between;
-    padding-right: 8%;
+    padding-right: 4%;
     /* flex-direction: row; */
 }
 
@@ -465,27 +465,21 @@ nav div i {
     0% {
         padding-right:0px;    }
     100% { padding-right:65px;}
-}
+}  
 
+/* section footer */
 
-   
-    
-    
-    
-    
-       
-
-
-
-/* section footer
 footer {
-    font-family: roboto;
-    padding: 20px;
-    padding-bottom: 1.5rem;
-    padding-left: 35px;
-    height: 200px;
+    max-width: 1440;
     background-color: rgba(0, 0, 0, 0.747);
+    /* margin: auto; */
+}   
+.boxFooter {
+    font-family: roboto;
+    padding: 1.5rem 0 1.5rem 1.5rem;   
     color: rgba(255, 255, 255, 0.986);
+    max-width: 1220px;
+    margin: auto;  
 }
 footer a {
     text-decoration: none;
@@ -500,12 +494,12 @@ footer a:hover {
     letter-spacing: 1.4px;
     padding-bottom: 18px;
 }
-footer div i {
+.fa-utensils, .fa-hands-helping {
     margin-right: 15px;
 }
 .finitionsFooter {
     line-height: 25px;
-} */
+}
 /*----------- Responsive-------------- */
 
 @media screen and (min-width:425px) and (max-width:1023px) {
@@ -518,6 +512,8 @@ footer div i {
     .btnCommander {
         width: 25%;
     }
+    #boxImg {
+        height: 22rem;
 }
 
 
