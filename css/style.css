@@ -286,7 +286,8 @@ a {
     transition: transform ease 400ms;   
 }
 .carteResto:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 5px rgb(33 33 33 / 29%);
 }
 
 .carteResto div:first-child {
@@ -342,7 +343,7 @@ a {
     display:flex ;
     justify-content:center; 
     align-items: center;
-    height: 35px;
+    height: 45px;
     width: 35px;
     border-radius: 50%;    
     margin-left: 1.75rem;
@@ -472,7 +473,7 @@ footer a:hover {
     #placementBtn {
         display: flex;
         flex-direction: row;
-        margin-bottom: 0.9rem;        
+        margin-bottom: 0rem;        
     }
   
     #placementBtn button i {
@@ -496,28 +497,33 @@ footer a:hover {
         font-size: 2.1rem;
     }
     .margesRechercher {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+
     }
     .slogan1 {
         font-size:x-large; 
-        padding-top: 3%;
+        padding-top: 2%;
     }
     .slogan2 {
-        font-size:x-large;
-        padding-bottom: 3%;
-        padding-top: 3%;
+        font-size:large;
+        padding-bottom: 1.5%;
+        padding-top: 1.5%;
     }
     .btnExplorer {
-        padding-top: 1.3rem;
+        padding-top: 0.8rem;
         padding-bottom:1.3rem;
         width: 22%;
-        height: 4rem;
+        height: 3rem;
         border-radius: 40px;
-        font-size: 1.1rem;         
+        font-size: 1.1rem; 
+        margin-bottom: 25px;       
     }
     h1 {
         font-size: 1.5rem;
         padding-left: 2rem;
+    }
+    .margesTitresSecondaires {
+        margin-top: 0.7vh;
     }
     #placementBtn {
         display: flex;
@@ -532,33 +538,12 @@ footer a:hover {
     #placementBtn button i {
         margin-right: 0.1rem;
         padding: 0.5rem;
-    }  
+    } 
+    #blocRestos {
+        margin-top: 20px;
+    } 
 }
 @media screen and (min-width: 1300px) {
-    /* h1 {
-        font-size: 1.8rem;
-        padding-left: 2rem;
-    }
-    .slogan1 {
-        padding-top: 10%;
-    }
-    .margesRechercher {
-        font-size: 1.3rem;
-    }
-    .slogan {
-        font-size:xx-large; 
-    }
-    .slogan2 {
-        font-size:x-large;
-    } */
-    /* .btnExplorer {
-        padding-top: 1.3rem;
-        padding-bottom:1.3rem;
-        width: 40%;
-        height: 3.5rem;
-        border-radius: 40px;
-        font-size: 1.3rem;         
-    } */
     #placementBtn div{
         display: flex;
         flex-direction: row;
