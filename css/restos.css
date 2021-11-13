@@ -147,8 +147,7 @@ nav div i {
 /*----COEUR VIDE--------*/
 .blocCoeurs :nth-child(1) {
     z-index: 2;
-    position: absolute;
-    position:center; 
+    position: absolute; 
     opacity: 1;
     height: 1.688rem;
     width: 1.938rem;
@@ -171,7 +170,6 @@ nav div i {
 .rideauCoeur {
     z-index : 1; 
     position: absolute;
-    position: center;
     height: 35px; 
     width:100%;
     opacity:0; 
@@ -321,7 +319,7 @@ nav div i {
     color:#99E2D0;
     font-size: 0px;
     border: 0px solid white;
-    background-color: white;
+    background-color: rgb (255, 255, 255);
     border-radius: 50%;
 }
 .boxChoixMenu1:hover .fa-check, .boxChoixMenu2:hover .fa-check, .boxChoixMenu3:hover .fa-check{
@@ -329,7 +327,7 @@ nav div i {
     font-size: 14px;
     font-weight: bold;
     border: 4px solid white;
-    background-color: white;
+    background-color: rgb (255, 255, 255);
     animation: rotation 0.8s linear 1;
 }
 .boxCheck:hover .fa-check{
@@ -383,7 +381,7 @@ nav div i {
 }
 /* ------------------FOOTER----------------- */
 footer {
-    max-width: 1440;
+    max-width: 1440px;
     background-color: rgba(0, 0, 0, 0.747);
 }   
 .boxFooter {
