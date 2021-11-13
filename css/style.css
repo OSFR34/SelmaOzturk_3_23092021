@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import url('footer.css');
 @import url('loader.css');
 /* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
@@ -70,8 +69,7 @@
         z-index: -5;
         }
     }
-
-/* Fin loader */
+/*----------general------------- */
     
 body {
     padding: 0;
@@ -80,22 +78,22 @@ body {
 }
 main {
     padding: 0;
-    font-family: roboto;
-    
+    font-family: roboto;    
 }
 #blocPage {
     max-width: 1350px;
     min-width: 350px;
     margin: 0 auto;
-
 }
 .backGris {
     background:rgba(196, 193, 193, 0.212);
     margin: 0;
 }
+.colorBlack {
+    color:black;
+}
 
-
-/* Fin general */
+/*---------- Fin general-------------------- */
 
 header {
     font-family: 'Shrikhand', cursive;
@@ -111,7 +109,7 @@ header:hover {
     cursor:pointer;
 }
 
-/*Recherche/ville*/
+/*-----Recherche/ville/Explorer-----------*/
 .rechercheVille {
     display: flex;
     align-items: center;
@@ -123,9 +121,6 @@ header:hover {
     gap: 1rem;
     font-weight:bolder; 
     color:rgba(0, 0, 0, 0.575)   
-}
-.colorBlack {
-    color:black;
 }
 .margesRechercher {
     padding-top: 17px;
@@ -209,9 +204,9 @@ header:hover {
     justify-content: center;
 }
 .margesTitresSecondaires {    
-    padding: 22px 0 0x 35px;
+    padding: 22px 0 0 35px;
 }
-/* Fonctionnement */
+/*---------- Fonctionnement --------------*/
 
 #placementBtn div {
 
@@ -229,35 +224,27 @@ header:hover {
     color:black;
     transition: transform ease 400ms;
     position:relative;
-
 }
-
 #placementBtn {
-
-    /* display:flex; */
     padding:15px;
     gap:25px;
     display: flex;
     flex-direction: column;
-    padding-left: 25px;
-    
+    padding-left: 25px;    
 }
 #placementBtn div {
     width: 100%;
     display: inline-flex;
     align-items: center;
 }
-
 #placementBtn div:hover {
     background-color: rgb(193 149 225 / 18%);
     cursor: pointer;
-    /* filter: brightness(1.1); */
     transform: scale(1.025);
 }
 #placementBtn div:hover >i {
     cursor: pointer;
-    color: #9356DC;
-       
+    color: #9356DC;       
 }
 #placementBtn div i {
     justify-content: flex-start;
@@ -265,10 +252,7 @@ header:hover {
     padding-left: 1.5rem;
     margin-right: 1.1rem;
 }
-
-
 span {
-    /* display: inline-block; */
     width: 24px;
     height: 24px;
     background: #9356DC;
@@ -282,11 +266,10 @@ span {
     left: 0;
     transform: translate3d(-50%,2px,0);
 }
-
 .fas fa-mobile-alt fa-chart-line {
     font-size: 60px;
 }
-/* Restos */
+/*---------- Restos------------ */
 
 #blocRestos {
     height: auto;
@@ -311,7 +294,6 @@ a {
 }
 .blocCartesRestos2 {
     display: flex;
-    /* flex-wrap: wrap; */
     gap: 0.5rem;
     height: auto;
     padding-left: 0;
@@ -336,7 +318,6 @@ a {
     top: 1rem;
     border-radius: 2px;    
 }
-
 .carteResto {
     position:relative;
     width: 98%;
@@ -350,7 +331,6 @@ a {
 .carteResto:hover {
     transform: scale(1.01);
 }
-
 .carteResto div:first-child {
     background-size: cover;
     background-position: center;
@@ -426,7 +406,7 @@ a {
     }
 /*----coeur plein----------*/
 
-.blocCoeurs :nth-child(2) { /*----coeur plein----------*/
+.blocCoeurs :nth-child(2) { 
     opacity: 0;
     height: 1.438rem;
     width: 1.625rem;
@@ -461,6 +441,39 @@ a {
     opacity: 1;
     }
 }
+/* -------------------FOOTER -----------------------*/
+
+.backGrisFonce {
+    max-width: 1440;
+    background-color: rgba(0, 0, 0, 0.747);
+}   
+.boxFooter {
+    font-family: roboto;
+    padding: 1.5rem; 
+   
+    color: rgba(255, 255, 255, 0.986);
+    max-width: 1200px;
+    margin: auto;  
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration-line: underline;
+}
+.logofooter {
+    font-family:shrikhand;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding-bottom: 18px;
+}
+.fa-utensils, .fa-hands-helping {
+    margin-right: 15px;
+}
+.finitionsFooter {
+    line-height: 25px;
+}
 /*-------------RESPONSIVE------------------- */
 @media screen and (min-width: 50px) and (max-width: 768px) {
     .blocCartesRestos1 {
@@ -483,7 +496,34 @@ a {
     }
 }    
 @media screen and (min-width: 769px) and (max-width:899px) {
-    #placementBtn {
+    
+    header {       
+        font-size: 150%;
+    }
+    .margesRechercher {
+        font-size: 1.3rem;
+    }
+    .slogan1 {
+        font-size:large; 
+        padding-top: 3% ;
+    }
+    .slogan2 {
+        font-size:large;
+        padding-top: 2%;
+    }
+    .btnExplorer {
+        padding-top: 1.3rem;
+        padding-bottom:1.3rem;
+        width: 30%;
+        height: 4rem;
+        border-radius: 40px;
+        font-size: 1rem; 
+        margin-bottom: 20px;        
+    }
+    h1 {
+        font-size: 120%;
+        padding-left: 2rem;
+    }#placementBtn {
         display: flex;
         flex-direction: row;
         margin-bottom: 0.9rem;        
@@ -502,32 +542,35 @@ a {
         font-size: 1.1rem;  
     }
     #blocRestos {
-       margin-top: 0px;
+       margin-top: 10px;
     }  
 }
 @media screen and (min-width: 900px) {
     header {       
-        font-size: 2.7rem;
+        font-size: 150%;
     }
     .margesRechercher {
         font-size: 1.3rem;
     }
-    .slogan {
-        font-size:xx-large; 
+    .slogan1 {
+        font-size:large; 
+        padding-top: 3% ;
     }
     .slogan2 {
-        font-size:x-large;
+        font-size:large;
+        padding-top: 2%;
     }
     .btnExplorer {
         padding-top: 1.3rem;
         padding-bottom:1.3rem;
-        width: 40%;
+        width: 30%;
         height: 4rem;
         border-radius: 40px;
-        font-size: 1.3rem;         
+        font-size: 1rem; 
+        margin-bottom: 20px;        
     }
     h1 {
-        font-size: 1.8rem;
+        font-size: 120%;
         padding-left: 2rem;
     }
     #placementBtn {
@@ -544,28 +587,35 @@ a {
         margin-right: 0.1 rem;
         padding: 0.5rem;
     }
+    #blocRestos {
+        margin-top: 10px;
+     } 
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 130%;
         padding-left: 2rem;
     }
     .margesRechercher {
         font-size: 1.3rem;
     }
-    .slogan {
-        font-size:xx-large; 
+    .slogan1 {
+        font-size:150%; 
     }
     .slogan2 {
-        font-size:x-large;
+        font-size:130%;
     }
     .btnExplorer {
-        padding-top: 1.3rem;
-        padding-bottom:1.3rem;
-        width: 40%;
-        height: 4rem;
+        padding-top: 1rem;
+        padding-bottom:1rem;
+        width: 28%;
+        height: 3.5rem;
         border-radius: 40px;
-        font-size: 1.3rem;         
+        font-size: 110%; 
+        margin-bottom: 20px;        
+    }
+    .margesTitresSecondaires {    
+        padding: 10px 0 0 15px;
     }
     #placementBtn div{
         display: flex;
@@ -582,6 +632,9 @@ a {
         margin-left: 1rem;
         padding: 0.5rem;
     }
+    #blocRestos {
+        margin-top: 10px;
+     } 
 }
     
 

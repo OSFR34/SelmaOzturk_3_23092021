@@ -288,7 +288,7 @@ nav div i {
     flex-direction:row;
     align-items: center;
 }
-.boxChoixMenu1:hover .boxPrixCheck, .boxChoixMenu2:hover .boxPrixCheck, .boxChoixMenu3:hover .boxPrixCheck{
+.boxChoixMenu1:hover .boxPrixCheck, .boxChoixMenu2:hover .boxPrixCheck, .boxChoixMenu3:hover .boxPrixCheck {
     display:flex ;
     justify-content:center; 
     align-items: center;
@@ -423,11 +423,14 @@ footer a:hover {
     .btnCommander {
         width: 25%;
     }
-    #boxImg {
-        height: 22rem;
+    #boxImg2, #boxImg3, #boxImg4  {
+        height: 25rem;
     }
 }
 @media screen and (min-width: 990px)  {
+    #boxImg2, #boxImg3, #boxImg4  {
+        height: 30rem;
+    }
     h1 {
         padding-left: 2.5rem;
     }
