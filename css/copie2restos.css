@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+/*----------------- GENERAL----------------------- */
 *,
 ::before,
 ::after {
@@ -10,14 +11,13 @@ body {
     margin: 0px;
     font-family: roboto, sans-serif;
 }
-/* header */
+
 .fa-arrow-left {
     font-size: 1.2rem;   
     padding-left: 0.6rem;
 }
 main {
     padding: 0;
-    /* margin:0 0.3rem 0 0.3rem;    */
 }
 #blocPage {
     max-width: 1400px;
@@ -56,7 +56,7 @@ h3 {
     margin-left: 0.35rem;
     margin-bottom: 1rem;
 }
-/*--------------------- Fin general----------------- */
+/*------------HEADER------------*/
 .logo {
     font-family: 'Shrikhand', cursive;
     font-size: 1.9rem;
@@ -86,7 +86,9 @@ h3 {
 nav div i {
     font-size: 1.5rem;
 }
-/*------------------ Main----------------------- */
+/*----------------------------------------
+             MAIN
+-----------------------------------------*/
 #boxImg {
     height: 16.6rem ;
     width: 100%;
@@ -119,7 +121,7 @@ nav div i {
     margin-top: 0.813rem;
     cursor: pointer;
 }
-/*----coeur vide--------*/
+/*----COEUR VIDE--------*/
 .blocCoeurs :nth-child(1) {
     z-index: 2;
     position: absolute;
@@ -132,7 +134,7 @@ nav div i {
     opacity: 0;
     transition: 1s ease-out;
 }
-/*----coeur plein----------*/
+/*----COEUR PLEIN----------*/
 .blocCoeurs :nth-child(2) { 
     opacity: 0;
     height: 1.438rem;
@@ -217,6 +219,7 @@ nav div i {
         box-shadow: 0px 0px 11px 2px rgb(0 0 0 / 18%);
         filter: brightness(1);
     }
+}
 .boxTextes {    
     display: flex;
     flex-direction: column;
@@ -252,9 +255,8 @@ nav div i {
     margin-left:15px ;       
 }
 .boxChoixMenu1:hover .detailsMenu, .boxChoixMenu2:hover .detailsMenu, .boxChoixMenu3:hover .detailsMenu{
-    /* .boxChoixMenu:hover .detailsMenu{ */
-        animation : diminutionTextes 0.8s linear 1;
-        animation-fill-mode:forwards;
+    animation : diminutionTextes 0.8s linear 1;
+    animation-fill-mode:forwards;
     }
 .boxPrixCheck {
     width: 55px;
@@ -264,7 +266,6 @@ nav div i {
     align-items: center;
 }
 .boxChoixMenu1:hover .boxPrixCheck, .boxChoixMenu2:hover .boxPrixCheck, .boxChoixMenu3:hover .boxPrixCheck{
-/* .boxChoixMenu:hover .boxPrixCheck { */
     display:flex ;
     justify-content:center; 
     align-items: center;
@@ -289,9 +290,6 @@ nav div i {
     align-items: center;
     background-color: #99E2D0;
     height: 100%;
-    /* margin-left: 70px; */
-    /* top: 0;
-    bottom: 0; */
     right: -65px;
     width: 65px;
 }
@@ -304,27 +302,20 @@ nav div i {
     border-radius: 50%;
 }
 .boxChoixMenu1:hover .fa-check, .boxChoixMenu2:hover .fa-check, .boxChoixMenu3:hover .fa-check{
-    /* position:absolute ; */
     color:#99E2D0;
     font-size: 14px;
     font-weight: bold;
     border: 4px solid white;
     background-color: white;
-    /* border-radius: 50%; */
-    animation: rotation 0.8s linear 1 ;
-    /* overflow: hidden; */
+    animation: rotation 0.8s linear 1;
 }
 .boxCheck:hover .fa-check{
     animation: clignoter 0.6s linear 3;
-    /* animation-duration: .8s;
-    animation-name: clignoter;
-    animation-iteration-count: infinite; */
-    /* transition: none; */
 }
 .positionBtnCommander {
     display: flex;
     justify-content: center;
-    }
+}
 .btnCommander {
     padding-top: 1.03rem;
     padding-bottom:1.03rem;
@@ -350,7 +341,7 @@ nav div i {
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     cursor:pointer;
 } 
-/*---------------------ANIMATIONS------------------------- */
+/*---------------------ANIMATIONS CHECK------------------------- */
 @keyframes rotation {
     100%{ transform:rotate(360deg) ; }
 }
@@ -367,11 +358,10 @@ nav div i {
         padding-right:0px;    }
     100% { padding-right:65px;}
 }
-/* ---------------section footer-------------- */
+/* ------------------FOOTER----------------- */
 footer {
     max-width: 1440;
     background-color: rgba(0, 0, 0, 0.747);
-    /* margin: auto; */
 }   
 .boxFooter {
     font-family: roboto;
@@ -399,17 +389,14 @@ footer a:hover {
 .finitionsFooter {
     line-height: 25px;
 }
-/*----------- Responsive-------------- */
+/*----------- RESPONSIVE-------------- */
 
 @media screen and (min-width:425px) and (max-width:1023px) {
     h3 {
-        padding: 0% 0% 0% 1%
+        padding: 0% 0% 0% 1%;
     } 
 }
 @media screen and (min-width: 766px) {
-    .logo {
-        padding-right: ;
-    }
     .btnCommander {
         width: 25%;
     }
