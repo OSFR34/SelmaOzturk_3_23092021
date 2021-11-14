@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('loader.css');
-/* ::-webkit-scrollbar { erreur validateur webkit*/
     ::-webkit-scrollbar {
     display: none;
 }
@@ -81,7 +80,7 @@ main {
     font-family: roboto;    
 }
 #blocPage {
-    max-width: 1350px;
+    max-width: 1440px;
     min-width: 350px;
     margin: 0 auto;
 }
@@ -138,9 +137,9 @@ header:hover {
 }
 .slogan2 {
     padding-top: 4%;
-    padding-bottom: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-bottom: 7%;
+    padding-left: 7%;
+    padding-right: 7%;
     text-align: center;
     font-size: 1.15rem;
     color:rgba(0, 0, 0, 0.562);
@@ -277,7 +276,7 @@ span {
     flex-direction: column;
     padding: 0 15px 30px 15px;
     background:rgba(196, 193, 193, 0.212);
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .blocCartesRestos1 {
     display: flex;
@@ -324,7 +323,7 @@ a {
     border-radius:15px;
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     height: 270px;
-    margin: 0 1% 0 1%;
+    margin: 0 1% 3% 1%;
     background: white; 
     transition: transform ease 400ms;   
 }
@@ -336,7 +335,7 @@ a {
     background-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height: 70%;
+    height: 68%;
 }
 .imgResto1 {
     background-image: url("../img/resto1.jpg");   
@@ -485,9 +484,9 @@ footer a:hover {
         flex-direction: column;
         margin-bottom: 0.5rem;
    }
-   .carteResto {
+   /* .carteResto {
        margin-bottom: 1.5rem;
-   }
+   } */
 }
 @media screen and (min-width: 500px) and (max-width:768px) {
     #placementBtn div {
@@ -607,7 +606,7 @@ footer a:hover {
     .btnExplorer {
         padding-top: 1rem;
         padding-bottom:1rem;
-        width: 28%;
+        width: 22%;
         height: 3.5rem;
         border-radius: 40px;
         font-size: 110%; 

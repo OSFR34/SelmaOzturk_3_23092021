@@ -19,7 +19,7 @@ main {
     padding: 0;
 }
 #blocPage {
-    max-width: 1400px;
+    max-width: 1440px;
     min-width: 350px;
     margin: 0 auto;
 }
@@ -285,6 +285,7 @@ nav div i {
     display:flex;
     flex-direction:row;
     align-items: center;
+ 
 }
 .boxChoixMenu1:hover .boxPrixCheck, .boxChoixMenu2:hover .boxPrixCheck, .boxChoixMenu3:hover .boxPrixCheck {
     display:flex ;
