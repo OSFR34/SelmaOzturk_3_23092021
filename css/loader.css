@@ -13,7 +13,7 @@ Cette Div contient les demiCercles
     height: 100%;
     /* z-index: -9999; */
     background-color: rgba(255,255,255,0);
-    animation: fadeInAnimation 2.1s ease-out; 
+    animation: fondLoaderOnOff 2.1s ease-out; 
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;   
     }
@@ -34,7 +34,7 @@ Cette Div contient les demiCercles
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: spin 2s linear;
+    animation: rotation 2s linear;
     animation-fill-mode: forwards;
     } 
 
@@ -52,7 +52,7 @@ Cette Div contient les demiCercles
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: spinreverse 2s linear;
+    animation: rotationInverse 2s linear;
     animation-fill-mode: forwards;
     }
 
@@ -69,7 +69,7 @@ Cette Div contient les demiCercles
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: spin 2s linear;
+    animation: rotation 2s linear;
     animation-fill-mode: forwards;
     }
 
@@ -86,7 +86,7 @@ Cette Div contient les demiCercles
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: spinreverse 2s linear;
+    animation: rotationInverse 2s linear;
     animation-fill-mode: forwards;
     }
 
@@ -103,7 +103,7 @@ Cette Div contient les demiCercles
     position: absolute;
     top: 50%;
     left: 50%;  
-    animation: spin 2s linear;  
+    animation: rotation 2s linear;  
     animation-fill-mode: forwards;  
     }
 
@@ -112,7 +112,7 @@ Cette Div contient les demiCercles
                     PARAMETRAGE DES ANIMATIONS
     ------------------------------------------------------------ */
 
-    @keyframes spin {
+    @keyframes rotation {
         0% {
         transform: translate(-50%,-50%) rotate(0deg) ;
         opacity: 1;
@@ -134,7 +134,7 @@ Cette Div contient les demiCercles
         }
     }
 
-    @keyframes spinreverse {
+    @keyframes rotationInverse {
         0% {
         transform: translate(-50%,-50%) rotate(0deg) ;
         opacity: 1;
@@ -155,7 +155,7 @@ Cette Div contient les demiCercles
         z-index: -5;
         }
     }
-    @keyframes fadeInAnimation { 
+    @keyframes fondLoaderOnOff { 
         0% { 
         background-color: rgba(255,255,255,1); 
         z-index: 8;
