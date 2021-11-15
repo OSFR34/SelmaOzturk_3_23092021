@@ -370,8 +370,8 @@ nav div i {
     100% { opacity:1; }
 }
 @keyframes diminutionTextes {
-    0% { padding-right:0px; }
-    100% { padding-right:65px; }
+    0% { padding-right:0px;    }
+    100% { padding-right:65px;}
 }
 /* ------------------FOOTER----------------- */
 footer {
