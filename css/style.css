@@ -270,7 +270,7 @@ a {
     transition: transform ease 400ms;   
 }
 .carteResto:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 .carteResto div:first-child {
     background-size: cover;
@@ -446,7 +446,6 @@ footer a:hover {
     .slogan2 {
         font-size:large;
         padding-top: 2%;
-        padding-bottom: ;
     }
     .btnExplorer {
         padding-top: 1.3rem;
